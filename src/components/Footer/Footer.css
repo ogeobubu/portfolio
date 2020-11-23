@@ -1,0 +1,12 @@
+footer {
+  background-color: var(--primary-color);
+  color: #ffffff;
+  text-align: center;
+  font-family: "Courier New", Courier, monospace !important;
+  height: 60vh;
+  padding-top: 9rem;
+}
+
+footer h1 {
+  letter-spacing: 5px;
+}

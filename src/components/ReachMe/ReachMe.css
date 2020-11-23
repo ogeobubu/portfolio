@@ -1,0 +1,65 @@
+.reach-me {
+  background: var(--primary-color);
+  color: whitesmoke;
+  height: fit-content;
+  justify-content: center;
+  align-items: center;
+}
+
+.reach-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3.5rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+.flex {
+  width: 62%;
+}
+
+.flex h2 {
+  font-size: 30px;
+  font-weight: 200;
+  margin-top: 5rem;
+}
+
+.flex p {
+  font-size: 18px;
+  font-weight: 100;
+}
+
+.location {
+  margin-top: 5rem;
+}
+
+input {
+  border: none;
+  outline: none;
+  padding: 1rem;
+  background-color: transparent;
+  border-bottom: 3px solid var(--secondary-color);
+  transition: all 0.3s ease-in;
+  color: #ffffff;
+}
+
+input:hover {
+  transform: scale(1.09);
+}
+
+i {
+  color: var(--secondary-color);
+}
+
+@media screen and (max-width: 960px) {
+  .reach-container {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .location {
+    display: none;
+  }
+}
