@@ -25,23 +25,28 @@ const IntroSection = () => {
           <br />
           <ul className="list-unstyled text-white social list-inline">
             <li className="list-inline-item">
-              <a href="https://facebook.com/ogeobubu9" target="_blank">
-                <i
-                  className="fa fa-facebook facebook fa-2x"
-                  rel="noreferral"
-                ></i>
+              <a
+                href="https://facebook.com/ogeobubu9"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa fa-facebook facebook fa-2x"></i>
               </a>
             </li>
             <li className="list-inline-item">
-              <a href="https://github.com/ogeobubu">
-                <i className="fa fa-github github fa-2x" rel="noreferral"></i>
+              <a
+                href="https://github.com/ogeobubu"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i className="fa fa-github github fa-2x"></i>
               </a>
             </li>
             <li className="list-inline-item">
               <a
                 href="https://twitter.com/obubuoge"
+                rel="noopener noreferrer"
                 target="_blank"
-                rel="noreferral"
               >
                 <i className="fa fa-twitter twitter fa-2x"></i>
               </a>
@@ -50,7 +55,7 @@ const IntroSection = () => {
               <a
                 target="_blank"
                 href="https://wa.me/2348146347130"
-                rel="noreferral"
+                rel="noopener noreferrer"
               >
                 <i className="fa fa-whatsapp whatsapp fa-2x"></i>
               </a>
