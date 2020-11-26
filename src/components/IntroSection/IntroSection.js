@@ -14,7 +14,7 @@ const IntroSection = () => {
             Are you looking for a passionate frontend developer who is
             experienced with HTML5, CSS3, JavaScript, React.js, Node.js,
             Express.js, MongoDB and who will convert your design to an
-            interactive website where users interact with your data ? Search no
+            interactive website where users interact with your data? Search no
             more you're in the right place.
           </p>
           <Link to="/about">

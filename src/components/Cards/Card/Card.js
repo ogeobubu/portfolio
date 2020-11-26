@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 const Card = (props) => {
   return (
     <>
-      <li className="cards__item">
+      <li data-aos="zoom-in" className="cards__item">
         <Link className="cards__item__link" to={props.path}>
           <figure className="cards__item__pic-wrap" data-category={props.label}>
             <img src={props.src} alt="project" className="cards__item__img" />

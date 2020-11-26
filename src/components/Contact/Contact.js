@@ -6,7 +6,7 @@ const Contact = () => {
   return (
     <div className="contact">
       <div className="contact-container">
-        <div className="contact-text">
+        <div data-aos="zoom-in-up" className="contact-text">
           <h1>Do you think I am the right person for you?</h1>
           <p>Contact me for your website below</p>
         </div>

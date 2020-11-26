@@ -8,7 +8,12 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        <div className="navbar-container">
+        <div
+          data-aos="fade-down"
+          data-aos-offset="300"
+          data-aos-easing="ease-in-sine"
+          className="navbar-container"
+        >
           <Link
             to="/"
             className="logo-navbar"
