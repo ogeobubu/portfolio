@@ -8,7 +8,7 @@ const Navbar = () => {
   return (
     <>
       <nav className="navbar">
-        <div className="navbar-container">
+        <div translate="no" className="navbar-container">
           <Link
             to="/"
             className="logo-navbar"
@@ -47,7 +47,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link
-                to="#project"
+                to="/#project"
                 className="nav-links"
                 onClick={() => setClick(false)}
               >
