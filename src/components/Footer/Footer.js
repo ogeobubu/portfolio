@@ -4,19 +4,10 @@ import "./Footer.css";
 const Footer = () => {
   return (
     <footer>
-      <h1 data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-        Oge Obubu
-      </h1>
-      <p data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-        Thank you for visiting
-      </p>
+      <h1>Oge Obubu</h1>
+      <p>Thank you for visiting</p>
       <br />
-      <ul
-        data-aos="fade-down"
-        data-aos-easing="linear"
-        data-aos-duration="1000"
-        className="list-unstyled text-white social list-inline"
-      >
+      <ul className="list-unstyled text-white social list-inline">
         <li className="list-inline-item">
           <a
             href="https://facebook.com/ogeobubu9"

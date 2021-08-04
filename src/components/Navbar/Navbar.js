@@ -38,7 +38,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link
-                to="/about"
+                to="/#about"
                 className="nav-links"
                 onClick={() => setClick(false)}
               >
@@ -47,7 +47,7 @@ const Navbar = () => {
             </li>
             <li className="nav-item">
               <Link
-                to="/projects"
+                to="#project"
                 className="nav-links"
                 onClick={() => setClick(false)}
               >

@@ -3,34 +3,35 @@ import Card from "./Card/Card";
 import "./Cards.css";
 import retoservices from "./Projects/retoservices-netlify-app.jpg";
 import factservices from "./Projects/fact-services-netlify-app-.jpg";
-import newstoolz from "./Projects/newstoolz.png";
-import image1 from "./Projects/image1.png";
-import image3 from "./Projects/image3.png";
+import ohtopup from './Projects/ohtopup-desktop.png'
+import blog from './Projects/mernblog-desktop.png'
+import food from './Projects/food-desktop (2).png'
 
 const Cards = () => {
   return (
-    <div className="cards">
+    <div id="projects" className="cards">
       <h1>My Recent Projects</h1>
       <div className="cards__container">
         <div className="cards__wrapper">
           <ul className="cards__items">
             <Card
               src={retoservices}
-              text="Multiple Pages Website"
-              path="/projects"
+              text="Responsive Landing Page Design using HTML5, CSS3 and Nodejs"
+              path="https://retoservices.netlify.app/"
             />
             <Card
               src={factservices}
-              text="Finance Website Project"
+              text="Responsive Finance Landing Page Design using HTML5, CSS3 and Vanilla JavaScript"
               path="/projects"
             />
-            <Card src={newstoolz} text="Blog-like Project" path="/projects" />
-            <Card src={image1} text="Explore this project" path="/projects" />
+            <Card src={blog} text="Responsive FullStack MERN Blog Application" path="https://still-headland-80064.herokuapp.com" />
+            <Card src={ohtopup} text="OhTopUp - A FullStack MERN application with payment gateway" path="https://ohtopupservice.herokuapp.com" />
             <Card
-              src={image3}
-              text="Coming Soon Landing Page"
-              path="/projects"
+              src={food}
+              text="Responsive React Food Delivery Dashboard Design"
+              path="https://food-ecom.netlify.app"
             />
+
           </ul>
         </div>
       </div>

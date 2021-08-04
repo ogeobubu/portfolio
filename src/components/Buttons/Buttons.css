@@ -4,6 +4,9 @@
 }
 
 .btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 8px 20px;
   border-radius: 8px;
   outline: none;
@@ -23,6 +26,7 @@
   color: #242424;
   border: 1px solid var(--secondary-color);
   transition: all 0.5s ease-in-out;
+  margin: 0 auto;
 }
 
 .btn-md {
@@ -40,15 +44,6 @@
   color: inherit;
   transform: scale(1.07);
   transition: all 0.5s ease-in-out;
-}
-
-.btn-contact {
-  background-color: var(--secondary-color);
-  color: #242424;
-  border: 1px solid var(--secondary-color);
-  transition: all 0.5s ease-in-out;
-  margin-left: 29rem;
-  margin-top: 1rem;
 }
 
 @media screen and (max-width: 960px) {

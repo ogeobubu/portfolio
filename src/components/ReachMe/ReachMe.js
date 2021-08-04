@@ -6,16 +6,12 @@ const ReachMe = () => {
     <div className="reach-me">
       <div className="reach-container">
         <div className="flex">
-          <h2 data-aos="zoom-in-right">
-            Do you have a project you want me to work on? Let's talk.
-          </h2>
-          <p data-aos="zoom-in-right">
-            Any website design you have in mind; reach out to me
-          </p>
+          <h2>Do you have a project you want me to work on? Let's talk.</h2>
+          <p>Any website design you have in mind - reach out to me</p>
           <form
             action="mailto:frankokafor634@gmail.com"
             method="post"
-            enctype="text/plain"
+            encType="text/plain"
           >
             <input type="submit" value="Send Message" />
             <i className="fas fa-chevron-right"></i>

@@ -48,7 +48,8 @@
 }
 
 .nav-item {
-  height: 4rem;
+  /* height: 4rem; */
+  border: 1px solid #ccc;
 }
 
 .nav-links {
@@ -90,7 +91,9 @@
   }
 
   .nav-menu.show {
-    background-color: var(--primary-color);
+    background: #654ea3;
+    background: -webkit-linear-gradient(to right, #eaafc8, #654ea3);
+    background: linear-gradient(to right, #eaafc8, #654ea3);
     left: 0;
     opacity: 1;
     transition: all 0.5s ease;
@@ -105,8 +108,8 @@
   }
 
   .nav-links:hover {
-    background-color: #ffffff;
-    color: #000080;
+    background-color: #000080;
+    color: #ffffff;
     border-radius: 2;
   }
 

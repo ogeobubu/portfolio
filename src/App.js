@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { BrowserRouter as Router } from "react-router-dom";
 import Navbar from "./components/Navbar/Navbar";
 import IntoSection from "./components/IntroSection/IntroSection";
 import About from "./components/About/About";
@@ -11,15 +12,17 @@ import Footer from "./components/Footer/Footer";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import ScrollHandler from "./components/ScrollHandler";
 
 const App = () => {
-  useEffect(() => {
-    AOS.init();
-    AOS.refresh();
-  }, []);
+  // useEffect(() => {
+  //   AOS.init();
+  //   AOS.refresh();
+  // }, []);
 
   return (
-    <>
+    <Router>
+      <ScrollHandler />
       <Navbar />
       <IntoSection />
       <About />
@@ -27,7 +30,7 @@ const App = () => {
       <Cards />
       <ReachMe />
       <Footer />
-    </>
+    </Router>
   );
 };
 
