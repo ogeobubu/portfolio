@@ -10,7 +10,7 @@ const IntroSection = () => {
       <div className="intro-container">
         <div className="details">
           <div className="detailsContent">
-            <h2 className="myName">HI! I'M ANDRETTI</h2>
+            <h2 className="myName">HI! I'M ANDRETTI 👋</h2>
             <h1 className="role">FRONTEND DEVELOPER</h1>
             <p>
               Are you looking for a passionate frontend developer who is

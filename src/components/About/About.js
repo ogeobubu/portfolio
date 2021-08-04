@@ -18,7 +18,7 @@ const About = () => {
           <h1>Obubu Ogechukwuka Andretti</h1>
         </div>
         <div className="about-me">
-          <p>
+          <p className="aboutDetail">
             Hello there! I'm Andretti, a frontend developer who resides in
             Nigeria. Coding is one of the things I am passionate about how I
             can be useful in solving a problem, that I enjoy doing, I easily
