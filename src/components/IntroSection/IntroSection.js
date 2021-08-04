@@ -53,7 +53,7 @@ const IntroSection = () => {
                   <i className="fa fa-twitter twitter fa-2x"></i>
                 </a>
               </li>
-              <li className="list-inline-item">
+              {/* <li className="list-inline-item">
                 <a
                   target="_blank"
                   href="https://wa.me/2348146347130"
@@ -61,7 +61,7 @@ const IntroSection = () => {
                 >
                   <i className="fa fa-whatsapp whatsapp fa-2x"></i>
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 

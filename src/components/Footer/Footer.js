@@ -10,11 +10,11 @@ const Footer = () => {
       <ul className="list-unstyled text-white social list-inline">
         <li className="list-inline-item">
           <a
-            href="https://facebook.com/ogeobubu9"
+            href="https://linkedin.com/in/oge-obubu"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fa fa-facebook facebook fa-2x"></i>
+            <i className="fa fa-linkedin facebook fa-2x"></i>
           </a>
         </li>
         <li className="list-inline-item">
@@ -33,15 +33,6 @@ const Footer = () => {
             rel="noopener noreferrer"
           >
             <i className="fa fa-twitter twitter fa-2x"></i>
-          </a>
-        </li>
-        <li className="list-inline-item">
-          <a
-            target="_blank"
-            href="https://wa.me/2348146347130"
-            rel="noopener noreferrer"
-          >
-            <i className="fa fa-whatsapp whatsapp fa-2x"></i>
           </a>
         </li>
       </ul>
