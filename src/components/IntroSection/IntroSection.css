@@ -75,6 +75,7 @@
   height: 500px;
   border-radius: 50%;
   object-fit: contain;
+  filter: drop-shadow(3px 5px 9px #202020);
 }
 
 /* Media Query */

@@ -2,7 +2,7 @@ import React from "react";
 import "./IntroSection.css";
 import Button from "../Buttons/Buttons";
 import { Link } from "react-router-dom";
-import me from '../img/main.jpeg'
+import me from '../img/main.jpg'
 
 const IntroSection = () => {
   return (
