@@ -10,7 +10,7 @@ const CV = () => {
         <div className="cv">
             <Link className="link" to={myCV} target="_blank" download>
                 <Button buttonStyle="btn--secondary" buttonSize="btn-md">
-                    Download CV
+                    Download Resume
                 </Button>
             </Link>
         </div>
