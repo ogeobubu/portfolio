@@ -2,7 +2,7 @@ import React from "react";
 import "./IntroSection.css";
 import Button from "../Buttons/Buttons";
 import { Link } from "react-router-dom";
-import me from '../img/main.jpg'
+import me from "../img/main.jpg";
 
 const IntroSection = () => {
   return (
@@ -10,7 +10,12 @@ const IntroSection = () => {
       <div className="intro-container">
         <div className="details">
           <div className="detailsContent">
-            <h2 className="myName">HI! I'M ANDRETTI 👋</h2>
+            <h2 className="myName">
+              HI! I'M ANDRETTI{" "}
+              <span role="img" aria-label="true">
+                👋
+              </span>
+            </h2>
             <h1 className="role">FRONTEND DEVELOPER</h1>
             <p>
               Are you looking for a passionate frontend developer who is
