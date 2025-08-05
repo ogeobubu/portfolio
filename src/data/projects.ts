@@ -5,7 +5,7 @@ export const mainProjects: Project[] = [
     title: "VendPal",
     description: "Connecting Businesses with Verified Vendors - the ultimate solution designed to deliver efficiency, security, and seamlessness to procurement companies and vendors.",
     link: "https://vendpal.vercel.app/",
-    tags: ["React", "TypeScript", "Node.js"]
+    tags: ["React", "TypeScript"]
   },
   {
     title: "VendStash",
@@ -17,7 +17,7 @@ export const mainProjects: Project[] = [
     title: "Squarebox",
     description: "Sell Gift cards and earn rewards - Your Gateway to Simple and Smart Trading with real-time processing.",
     link: "https://squarebox.ng/",
-    tags: ["React", "API Integration", "Rewards System"]
+    tags: ["React", "API Integration"]
   },
   {
     title: "Mavericks",
@@ -38,12 +38,12 @@ export const sideProjects: Project[] = [
     title: "OhTopUp",
     description: "Affordable Utilities Purchases - Pay your bills and enjoy discounts effortlessly with instant processing.",
     link: "https://ohtopup.onrender.com",
-    tags: ["Utilities", "Payment Processing"]
+    tags: ["Utilities", "Payment Processing", "Rewards System"]
   },
   {
     title: "Sidekicke",
     description: "Integrated Marketing Agency - A full-fledged 21st-century Experiential Marketing Agency creating viral consumer experiences.",
     link: "https://sidekicke.vercel.app/",
-    tags: ["Marketing", "Brand Experience", "Creative"]
+    tags: ["Nextjs", "Marketing", "Brand Experience", "Creative"]
   }
 ];

@@ -7,10 +7,12 @@ import { SocialLinks } from './components/SocialLinks';
 import { mainProjects, sideProjects } from './data/projects';
 import { socialLinks } from './data/socialLinks';
 import { Project } from './types';
+import { Preloader } from './components/Preloader';
 
 const Portfolio: React.FC = () => {
   const [isDark, setIsDark] = useState<boolean>(true);
   const [isLoaded, setIsLoaded] = useState<boolean>(false);
+  const [showPreloader, setShowPreloader] = useState<boolean>(true);
   const [expandedProject, setExpandedProject] = useState<number | null>(null);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState<boolean>(false);
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
@@ -19,6 +21,24 @@ const Portfolio: React.FC = () => {
     const timer = setTimeout(() => setIsLoaded(true), 100);
     return () => clearTimeout(timer);
   }, []);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    setIsDark(mediaQuery.matches);
+
+    const handleChange = (e: MediaQueryListEvent) => {
+      setIsDark(e.matches);
+    };
+
+    mediaQuery.addEventListener('change', handleChange);
+    
+    return () => mediaQuery.removeEventListener('change', handleChange);
+  }, []);
+
+  const handlePreloaderComplete = () => {
+    setShowPreloader(false);
+    setIsLoaded(true);
+  };
 
   const toggleTheme = () => {
     setIsDark(!isDark);
@@ -43,6 +63,9 @@ const Portfolio: React.FC = () => {
 
   return (
     <div className={`min-h-screen transition-all duration-700 ${isDark ? 'bg-black text-white' : 'bg-white text-gray-900'}`}>
+      {showPreloader && <Preloader onComplete={handlePreloaderComplete} isDark={isDark} />}
+
+      {!showPreloader && (<>
       <ThemeToggle isDark={isDark} toggleTheme={toggleTheme} />
       <MobileMenu 
         isDark={isDark} 
@@ -202,7 +225,7 @@ const Portfolio: React.FC = () => {
                 Contact me: 
                 <a 
                   href="mailto:ogeobubu@gmail.com" 
-                  className="text-blue-400 hover:text-blue-300 transition-colors inline-flex items-center gap-1 hover:underline"
+                  className="text-blue-400 text-lg sm:text-xl hover:text-blue-300 transition-colors inline-flex items-center gap-1 hover:underline "
                 >
                   <Mail className="w-4 h-4" />
                   ogeobubu@gmail.com
@@ -214,6 +237,8 @@ const Portfolio: React.FC = () => {
 
         <SocialLinks isDark={isDark} socialLinks={socialLinks} />
       </div>
+      </>
+      )}
 
       <style jsx global>{`
         @keyframes spin-slow {
