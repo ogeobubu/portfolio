@@ -45,16 +45,34 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
       <div className={`relative rounded-lg h-32 sm:h-40 mb-3 overflow-hidden ${
         isDark ? 'bg-gray-700' : 'bg-gray-200'
       }`}>
-        <div className="w-full h-full rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 flex items-center justify-center">
+        <div 
+          className="w-full h-full rounded-lg flex items-center justify-center"
+          style={{
+            background: 'linear-gradient(135deg, rgba(59, 130, 246, 0.2) 0%, rgba(139, 92, 246, 0.2) 100%)',
+            backgroundColor: 'rgba(59, 130, 246, 0.2)' // Fallback
+          }}
+        >
           <div className="text-xs text-gray-400 text-center px-2">
-            <div className="w-8 h-8 mx-auto mb-2 rounded-full bg-gradient-to-r from-blue-400 to-purple-400 flex items-center justify-center">
+            <div 
+              className="w-8 h-8 mx-auto mb-2 rounded-full flex items-center justify-center"
+              style={{
+                background: 'linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%)',
+                backgroundColor: '#60a5fa' // Fallback
+              }}
+            >
               <ExternalLink className="w-4 h-4 text-white" />
             </div>
             <div>{project.title}</div>
           </div>
         </div>
         
-        <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+        <div 
+          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
+          style={{
+            background: 'linear-gradient(135deg, transparent 0%, rgba(0, 0, 0, 0.5) 100%)',
+            backgroundColor: 'rgba(0, 0, 0, 0.5)' // Fallback
+          }}
+        >
           <div className="p-3 text-white text-xs">
             Click to visit →
           </div>

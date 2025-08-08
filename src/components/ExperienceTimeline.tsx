@@ -194,7 +194,11 @@ export const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ isDark, 
             </p>
             <a 
               href="mailto:ogeobubu@gmail.com"
-              className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center gap-2 px-6 sm:px-8 py-3 sm:py-4 text-white rounded-full font-semibold transition-all duration-300 transform hover:scale-105"
+              style={{
+                background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+                backgroundColor: '#3b82f6' // Fallback
+              }}
             >
               <Calendar className="w-4 h-4 sm:w-5 sm:h-5" />
               Let's Work Together

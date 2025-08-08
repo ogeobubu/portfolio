@@ -113,6 +113,30 @@ const EnhancedPortfolio: React.FC = () => {
     { label: "Awards Won", value: "3", icon: Award }
   ];
 
+  // Gradient styles with fallbacks
+  const gradientBackground = {
+    background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+    backgroundColor: '#3b82f6' // Fallback
+  };
+
+  const gradientText = {
+    background: 'linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%)',
+    WebkitBackgroundClip: 'text' as const,
+    WebkitTextFillColor: 'transparent' as const,
+    backgroundClip: 'text' as const,
+    color: isDark ? '#60a5fa' : '#3b82f6' // Fallback
+  };
+
+  const buttonGradient = {
+    background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+    backgroundColor: '#3b82f6' // Fallback
+  };
+
+  const progressGradient = {
+    background: 'linear-gradient(135deg, #60a5fa 0%, #8b5cf6 100%)',
+    backgroundColor: '#60a5fa' // Fallback
+  };
+
   return (
     <div className={`min-h-screen transition-all duration-700 ${isDark ? 'bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white' : 'bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900'}`}>
       {showPreloader && <Preloader onComplete={handlePreloaderComplete} isDark={isDark} />}
@@ -133,7 +157,10 @@ const EnhancedPortfolio: React.FC = () => {
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
             <div className="flex items-center space-x-8">
-              <h1 className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+              <h1 
+                className="text-xl font-bold"
+                style={gradientText}
+              >
                 OGE OBUBU
               </h1>
               <div className="hidden md:flex space-x-6">
@@ -166,7 +193,15 @@ const EnhancedPortfolio: React.FC = () => {
 
       <div className="pt-20">
         {/* Hero Section */}
-        <section ref={(el) => sectionsRef.current['home'] = el} className="min-h-screen flex items-center justify-center relative overflow-hidden">
+        <section
+          ref={(el) => {
+            // Only assign if el is a HTMLDivElement
+            if (el && el instanceof HTMLDivElement) {
+              sectionsRef.current['home'] = el;
+            }
+          }}
+          className="min-h-screen flex items-center justify-center relative overflow-hidden"
+        >
           <div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-pink-500/10"></div>
           <div className="container mx-auto px-4 py-20 relative z-10">
             <div className="text-center max-w-4xl mx-auto">
@@ -174,7 +209,10 @@ const EnhancedPortfolio: React.FC = () => {
                 isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
               }`}>
                 <div className="mb-8">
-                  <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 p-1">
+                  <div 
+                    className="w-24 h-24 mx-auto mb-6 rounded-full p-1"
+                    style={gradientBackground}
+                  >
                     <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center text-white font-bold text-2xl">
                       OO
                     </div>
@@ -182,7 +220,7 @@ const EnhancedPortfolio: React.FC = () => {
                   <h2 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
                     Frontend
                     <br />
-                    <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">
+                    <span style={gradientText}>
                       Solutions-Focused
                     </span>
                     <br />
@@ -194,7 +232,8 @@ const EnhancedPortfolio: React.FC = () => {
                   <div className="flex flex-col sm:flex-row gap-4 justify-center">
                     <button 
                       onClick={() => scrollToSection('projects')}
-                      className="px-8 py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2"
+                      className="px-8 py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 text-white"
+                      style={buttonGradient}
                     >
                       View My Work
                       <ArrowRight className="w-5 h-5" />
@@ -224,7 +263,10 @@ const EnhancedPortfolio: React.FC = () => {
                     isDark ? 'bg-gray-800/50 border border-gray-700/50' : 'bg-white/50 border border-gray-200/50'
                   } ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
                 >
-                  <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 flex items-center justify-center">
+                  <div 
+                    className="w-12 h-12 mx-auto mb-4 rounded-full flex items-center justify-center"
+                    style={gradientBackground}
+                  >
                     <stat.icon className="w-6 h-6 text-white" />
                   </div>
                   <div className="text-3xl font-bold text-blue-400 mb-2">{stat.value}</div>
@@ -236,7 +278,7 @@ const EnhancedPortfolio: React.FC = () => {
         </section>
 
         {/* About Section */}
-        <section ref={(el) => sectionsRef.current['about'] = el} className="py-20">
+        <section ref={(el) => sectionsRef.current['about'] = el as HTMLDivElement | null} className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className={`text-center mb-16 ${
@@ -308,7 +350,7 @@ const EnhancedPortfolio: React.FC = () => {
         </section>
 
         {/* Skills Section */}
-        <section ref={(el) => sectionsRef.current['skills'] = el} className="py-20">
+        <section ref={(el) => sectionsRef.current['skills'] = el as HTMLDivElement | null} className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className={`text-center mb-16 ${
@@ -339,8 +381,11 @@ const EnhancedPortfolio: React.FC = () => {
                     </div>
                     <div className="w-full bg-gray-700 rounded-full h-2">
                       <div 
-                        className="bg-gradient-to-r from-blue-400 to-purple-500 h-2 rounded-full transition-all duration-1000"
-                        style={{ width: `${skill.level}%` }}
+                        className="h-2 rounded-full transition-all duration-1000"
+                        style={{ 
+                          ...progressGradient,
+                          width: `${skill.level}%` 
+                        }}
                       ></div>
                     </div>
                   </div>
@@ -351,7 +396,7 @@ const EnhancedPortfolio: React.FC = () => {
         </section>
 
         {/* Experience Section */}
-        <section ref={(el) => sectionsRef.current['experience'] = el} className="py-20">
+        <section ref={(el) => sectionsRef.current['experience'] = el as HTMLDivElement | null} className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className={`text-center mb-16 ${
@@ -401,7 +446,7 @@ const EnhancedPortfolio: React.FC = () => {
         </section>
 
         {/* Projects Section */}
-        <section ref={(el) => sectionsRef.current['projects'] = el} className="py-20">
+        <section ref={(el) => sectionsRef.current['projects'] = el as HTMLDivElement | null} className="py-20">
           <div className="container mx-auto px-4">
             <div className={`text-center mb-16 ${
               isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
@@ -473,7 +518,7 @@ const EnhancedPortfolio: React.FC = () => {
         </section>
 
         {/* Contact Section */}
-        <section ref={(el) => sectionsRef.current['contact'] = el} className="py-20">
+        <section ref={(el) => sectionsRef.current['contact'] = el as HTMLDivElement | null} className="py-20">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
               <div className={`text-center mb-16 ${

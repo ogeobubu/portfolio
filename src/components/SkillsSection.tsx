@@ -38,6 +38,23 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ isDark, isLoaded }
     return skills.filter(skill => skill.category === category);
   };
 
+  // Gradient styles with fallbacks
+  const getGradientStyle = (colorClass: string) => {
+    const colorMap: { [key: string]: { from: string; to: string; fallback: string } } = {
+      "from-blue-500 to-purple-500": { from: "#3b82f6", to: "#8b5cf6", fallback: "#3b82f6" },
+      "from-green-500 to-blue-500": { from: "#10b981", to: "#3b82f6", fallback: "#10b981" },
+      "from-orange-500 to-red-500": { from: "#f97316", to: "#ef4444", fallback: "#f97316" },
+      "from-purple-500 to-pink-500": { from: "#8b5cf6", to: "#ec4899", fallback: "#8b5cf6" }
+    };
+
+    const colors = colorMap[colorClass] || { from: "#3b82f6", to: "#8b5cf6", fallback: "#3b82f6" };
+
+    return {
+      background: `linear-gradient(135deg, ${colors.from} 0%, ${colors.to} 100%)`,
+      backgroundColor: colors.fallback // Fallback
+    };
+  };
+
   return (
     <section className="py-16 sm:py-20">
       <div className="max-w-6xl mx-auto px-4">
@@ -62,7 +79,10 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ isDark, isLoaded }
                 }`}
               >
                 <div className="flex items-center gap-3 mb-4 sm:mb-6">
-                  <div className={`w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r ${category.color} flex items-center justify-center`}>
+                  <div 
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center"
+                    style={getGradientStyle(category.color)}
+                  >
                     <category.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <h3 className="text-lg sm:text-xl font-bold">{category.name}</h3>
@@ -80,8 +100,11 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ isDark, isLoaded }
                       </div>
                       <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
                         <div 
-                          className={`bg-gradient-to-r ${category.color} h-2 rounded-full transition-all duration-1000 ease-out`}
-                          style={{ width: `${skill.level}%` }}
+                          className="h-2 rounded-full transition-all duration-1000 ease-out"
+                          style={{ 
+                            ...getGradientStyle(category.color),
+                            width: `${skill.level}%` 
+                          }}
                         ></div>
                       </div>
                     </div>
@@ -100,28 +123,40 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ isDark, isLoaded }
             <h3 className="text-xl sm:text-2xl font-bold mb-4 sm:mb-6 text-center">Specializations</h3>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               <div className="text-center">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+                <div 
+                  className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-full flex items-center justify-center"
+                  style={getGradientStyle("from-blue-500 to-purple-500")}
+                >
                   <Shield className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                 </div>
                 <h4 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Security</h4>
                 <p className="text-xs sm:text-sm text-gray-400">Secure applications for finance & legal</p>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center">
+                <div 
+                  className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-full flex items-center justify-center"
+                  style={getGradientStyle("from-green-500 to-blue-500")}
+                >
                   <Smartphone className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                 </div>
                 <h4 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Mobile-First</h4>
                 <p className="text-xs sm:text-sm text-gray-400">Responsive & progressive web apps</p>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center">
+                <div 
+                  className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-full flex items-center justify-center"
+                  style={getGradientStyle("from-orange-500 to-red-500")}
+                >
                   <Zap className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                 </div>
                 <h4 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Performance</h4>
                 <p className="text-xs sm:text-sm text-gray-400">Optimized for speed & efficiency</p>
               </div>
               <div className="text-center">
-                <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-full bg-gradient-to-r from-purple-500 to-pink-500 flex items-center justify-center">
+                <div 
+                  className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-full flex items-center justify-center"
+                  style={getGradientStyle("from-purple-500 to-pink-500")}
+                >
                   <Globe className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                 </div>
                 <h4 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">Global Scale</h4>

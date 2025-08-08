@@ -95,7 +95,13 @@ export const EnhancedContactSection: React.FC<EnhancedContactSectionProps> = ({ 
               
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+                  <div 
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center"
+                    style={{
+                      background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+                      backgroundColor: '#3b82f6' // Fallback
+                    }}
+                  >
                     <Mail className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div>
@@ -110,7 +116,13 @@ export const EnhancedContactSection: React.FC<EnhancedContactSectionProps> = ({ 
                 </div>
                 
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center">
+                  <div 
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center"
+                    style={{
+                      background: 'linear-gradient(135deg, #10b981 0%, #3b82f6 100%)',
+                      backgroundColor: '#10b981' // Fallback
+                    }}
+                  >
                     <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div>
@@ -120,7 +132,13 @@ export const EnhancedContactSection: React.FC<EnhancedContactSectionProps> = ({ 
                 </div>
                 
                 <div className="flex items-center gap-3 sm:gap-4">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gradient-to-r from-orange-500 to-red-500 flex items-center justify-center">
+                  <div 
+                    className="w-10 h-10 sm:w-12 sm:h-12 rounded-full flex items-center justify-center"
+                    style={{
+                      background: 'linear-gradient(135deg, #f97316 0%, #ef4444 100%)',
+                      backgroundColor: '#f97316' // Fallback
+                    }}
+                  >
                     <Clock className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                   </div>
                   <div>
@@ -141,7 +159,13 @@ export const EnhancedContactSection: React.FC<EnhancedContactSectionProps> = ({ 
               
               {isSubmitted ? (
                 <div className="text-center py-8 sm:py-12">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-full bg-gradient-to-r from-green-500 to-blue-500 flex items-center justify-center">
+                  <div 
+                    className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-full flex items-center justify-center"
+                    style={{
+                      background: 'linear-gradient(135deg, #10b981 0%, #3b82f6 100%)',
+                      backgroundColor: '#10b981' // Fallback
+                    }}
+                  >
                     <CheckCircle className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
                   <h4 className="text-lg sm:text-xl font-semibold mb-2">Message Sent!</h4>
@@ -224,8 +248,12 @@ export const EnhancedContactSection: React.FC<EnhancedContactSectionProps> = ({ 
                     className={`w-full py-3 sm:py-4 px-4 sm:px-6 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center gap-2 text-sm sm:text-base ${
                       isSubmitting
                         ? 'bg-gray-500 cursor-not-allowed'
-                        : 'bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 transform hover:scale-105'
+                        : 'transform hover:scale-105'
                     } text-white`}
+                    style={!isSubmitting ? {
+                      background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+                      backgroundColor: '#3b82f6' // Fallback
+                    } : undefined}
                   >
                     {isSubmitting ? (
                       <>
@@ -254,7 +282,13 @@ export const EnhancedContactSection: React.FC<EnhancedContactSectionProps> = ({ 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
               {services.map((service, index) => (
                 <div key={index} className="text-center group">
-                  <div className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center group-hover:scale-110 transition-transform">
+                  <div 
+                    className="w-12 h-12 sm:w-16 sm:h-16 mx-auto mb-3 sm:mb-4 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform"
+                    style={{
+                      background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+                      backgroundColor: '#3b82f6' // Fallback
+                    }}
+                  >
                     <service.icon className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
                   <h4 className="font-semibold mb-1 sm:mb-2 text-sm sm:text-base">{service.title}</h4>

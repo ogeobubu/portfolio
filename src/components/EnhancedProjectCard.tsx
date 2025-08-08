@@ -33,6 +33,23 @@ export const EnhancedProjectCard: React.FC<EnhancedProjectCardProps> = ({
     return 'from-purple-500 to-pink-500';
   };
 
+  // Gradient styles with fallbacks
+  const getGradientStyle = (colorClass: string) => {
+    const colorMap: { [key: string]: { from: string; to: string; fallback: string } } = {
+      "from-blue-500 to-purple-500": { from: "#3b82f6", to: "#8b5cf6", fallback: "#3b82f6" },
+      "from-green-500 to-blue-500": { from: "#10b981", to: "#3b82f6", fallback: "#10b981" },
+      "from-orange-500 to-red-500": { from: "#f97316", to: "#ef4444", fallback: "#f97316" },
+      "from-purple-500 to-pink-500": { from: "#8b5cf6", to: "#ec4899", fallback: "#8b5cf6" }
+    };
+
+    const colors = colorMap[colorClass] || { from: "#3b82f6", to: "#8b5cf6", fallback: "#3b82f6" };
+
+    return {
+      background: `linear-gradient(135deg, ${colors.from} 0%, ${colors.to} 100%)`,
+      backgroundColor: colors.fallback // Fallback
+    };
+  };
+
   return (
     <div 
       className={`group cursor-pointer transition-all duration-500 hover:scale-[1.02] ${
@@ -43,7 +60,10 @@ export const EnhancedProjectCard: React.FC<EnhancedProjectCardProps> = ({
     >
       <div className="flex items-start justify-between mb-4">
         <div className="flex items-center gap-3">
-          <div className={`w-10 h-10 rounded-full bg-gradient-to-r ${getProjectColor(project.title)} flex items-center justify-center text-white`}>
+          <div 
+            className="w-10 h-10 rounded-full flex items-center justify-center text-white"
+            style={getGradientStyle(getProjectColor(project.title))}
+          >
             {getProjectIcon(project.title)}
           </div>
           <h4 className="font-bold text-lg group-hover:text-blue-400 transition-colors line-clamp-2">
@@ -64,9 +84,18 @@ export const EnhancedProjectCard: React.FC<EnhancedProjectCardProps> = ({
       <div className={`relative rounded-xl h-48 mb-4 overflow-hidden ${
         isDark ? 'bg-gray-700' : 'bg-gray-200'
       }`}>
-        <div className={`w-full h-full rounded-xl bg-gradient-to-br ${getProjectColor(project.title)}/20 flex items-center justify-center`}>
+        <div 
+          className="w-full h-full rounded-xl flex items-center justify-center"
+          style={{
+            ...getGradientStyle(getProjectColor(project.title)),
+            opacity: 0.2
+          }}
+        >
           <div className="text-center px-4">
-            <div className={`w-16 h-16 mx-auto mb-3 rounded-full bg-gradient-to-r ${getProjectColor(project.title)} flex items-center justify-center`}>
+            <div 
+              className="w-16 h-16 mx-auto mb-3 rounded-full flex items-center justify-center"
+              style={getGradientStyle(getProjectColor(project.title))}
+            >
               {getProjectIcon(project.title)}
             </div>
             <div className="text-sm font-semibold text-gray-300">{project.title}</div>
@@ -74,7 +103,13 @@ export const EnhancedProjectCard: React.FC<EnhancedProjectCardProps> = ({
           </div>
         </div>
         
-        <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end">
+        <div 
+          className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end"
+          style={{
+            background: 'linear-gradient(135deg, transparent 0%, rgba(0, 0, 0, 0.6) 100%)',
+            backgroundColor: 'rgba(0, 0, 0, 0.6)' // Fallback
+          }}
+        >
           <div className="p-4 text-white">
             <div className="text-sm font-semibold">View Project</div>
             <div className="text-xs opacity-80">Click to explore →</div>

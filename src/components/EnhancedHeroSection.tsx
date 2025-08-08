@@ -21,6 +21,25 @@ export const EnhancedHeroSection: React.FC<EnhancedHeroSectionProps> = ({
     { label: "Technologies", value: "15+", icon: Zap }
   ];
 
+  // Gradient styles with fallbacks
+  const gradientBackground = {
+    background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+    backgroundColor: '#3b82f6' // Fallback
+  };
+
+  const gradientText = {
+    background: 'linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%)',
+    WebkitBackgroundClip: 'text' as const,
+    WebkitTextFillColor: 'transparent' as const,
+    backgroundClip: 'text' as const,
+    color: isDark ? '#60a5fa' : '#3b82f6' // Fallback
+  };
+
+  const buttonGradient = {
+    background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+    backgroundColor: '#3b82f6' // Fallback
+  };
+
   return (
     <section className="min-h-screen flex items-center justify-center relative overflow-hidden">
       {/* Background Effects */}
@@ -39,7 +58,10 @@ export const EnhancedHeroSection: React.FC<EnhancedHeroSectionProps> = ({
             {/* Profile Avatar */}
             <div className="mb-6 sm:mb-8">
               <div className="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 sm:mb-6">
-                <div className="w-full h-full rounded-full bg-gradient-to-r from-blue-400 to-purple-500 p-1 sm:p-2 animate-spin-slow">
+                <div 
+                  className="w-full h-full rounded-full p-1 sm:p-2 animate-spin-slow"
+                  style={gradientBackground}
+                >
                   <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center text-white font-bold text-lg sm:text-3xl">
                     <img src={ogeobubu} alt="ogeobubu" className="w-full h-full object-cover rounded-full" />
                   </div>
@@ -54,7 +76,10 @@ export const EnhancedHeroSection: React.FC<EnhancedHeroSectionProps> = ({
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 leading-tight px-2">
               Frontend
               <br />
-              <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400 bg-clip-text text-transparent animate-pulse">
+              <span 
+                className="animate-pulse"
+                style={gradientText}
+              >
                 Solutions-Focused
               </span>
               <br />
@@ -71,7 +96,8 @@ export const EnhancedHeroSection: React.FC<EnhancedHeroSectionProps> = ({
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center mb-8 sm:mb-12 px-4">
               <button 
                 onClick={() => scrollToSection('projects')}
-                className="group px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl text-sm sm:text-base"
+                className="group px-6 sm:px-8 py-3 sm:py-4 rounded-full font-semibold transition-all duration-300 transform hover:scale-105 flex items-center justify-center gap-2 shadow-lg hover:shadow-xl text-sm sm:text-base text-white"
+                style={buttonGradient}
               >
                 <span className="text-white">View My Work</span>
                 <ArrowRight className="text-white w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
@@ -94,7 +120,10 @@ export const EnhancedHeroSection: React.FC<EnhancedHeroSectionProps> = ({
                     isDark ? 'bg-gray-800/30 border border-gray-700/50' : 'bg-white/30 border border-gray-200/50'
                   } ${isLoaded ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'} hover:scale-105`}
                 >
-                  <div className="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-1 sm:mb-2 rounded-full bg-gradient-to-r from-blue-400 to-purple-500 flex items-center justify-center">
+                  <div 
+                    className="w-6 h-6 sm:w-8 sm:h-8 mx-auto mb-1 sm:mb-2 rounded-full flex items-center justify-center"
+                    style={gradientBackground}
+                  >
                     <stat.icon className="w-3 h-3 sm:w-4 sm:h-4 text-white" />
                   </div>
                   <div className="text-lg sm:text-xl font-bold text-blue-400 mb-1">{stat.value}</div>

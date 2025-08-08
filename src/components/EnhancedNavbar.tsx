@@ -42,6 +42,20 @@ export const EnhancedNavbar: React.FC<EnhancedNavbarProps> = ({
     { name: 'Resume', href: 'https://www.canva.com/design/DAGvHY8u3KA/5FiqKEtpeOLIxJZ9AOn2xQ/edit?utm_content=DAGvHY8u3KA&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton' }
   ];
 
+  // Gradient styles with fallbacks
+  const gradientBackground = {
+    background: 'linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%)',
+    backgroundColor: '#3b82f6' // Fallback
+  };
+
+  const gradientText = {
+    background: 'linear-gradient(135deg, #60a5fa 0%, #a78bfa 100%)',
+    WebkitBackgroundClip: 'text' as const,
+    WebkitTextFillColor: 'transparent' as const,
+    backgroundClip: 'text' as const,
+    color: isDark ? '#60a5fa' : '#3b82f6' // Fallback
+  };
+
   return (
     <>
       {/* Desktop Navigation */}
@@ -67,10 +81,16 @@ export const EnhancedNavbar: React.FC<EnhancedNavbarProps> = ({
     {/* Centered Logo and Name */}
     <div className="flex items-center justify-center flex-grow h-full">
       <div className="flex items-center space-x-2">
-        <div className="w-10 h-10 sm:w-10 sm:h-10 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+        <div 
+          className="w-10 h-10 sm:w-10 sm:h-10 rounded-full flex items-center justify-center"
+          style={gradientBackground}
+        >
           <img src={isDark ? logoDark : logo} alt="logo" className="w-full h-full object-cover rounded-full" />
         </div>
-        <h3 className="text-sm sm:text-base font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+        <h3 
+          className="text-sm sm:text-base font-bold"
+          style={gradientText}
+        >
           OGE OBUBU
         </h3>
       </div>
@@ -146,10 +166,16 @@ export const EnhancedNavbar: React.FC<EnhancedNavbarProps> = ({
               {/* Header */}
               <div className="flex items-center justify-between mb-6">
                 <div className="flex items-center space-x-2">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+                  <div 
+                    className="w-8 h-8 rounded-full flex items-center justify-center"
+                    style={gradientBackground}
+                  >
                     <span className="text-white font-bold text-sm">OO</span>
                   </div>
-                  <h2 className="text-base font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  <h2 
+                    className="text-base font-bold"
+                    style={gradientText}
+                  >
                     OGE OBUBU
                   </h2>
                 </div>
