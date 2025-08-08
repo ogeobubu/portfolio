@@ -5,7 +5,7 @@
   "scripts": {
     "start": "ts-node src/server.ts",
     "dev": "nodemon src/server.ts",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "echo 'No build required for ts-node' && exit 0"
   },
   "dependencies": {
     "cors": "^2.8.5",
