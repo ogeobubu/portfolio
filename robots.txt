@@ -1,3 +1,203 @@
-# https://www.robotstxt.org/robotstxt.html
+# Comprehensive Robots.txt for Oge Obubu Portfolio
+# This file helps search engines understand how to crawl and index the website
+
+# Allow all crawlers
 User-agent: *
-Disallow:
+Allow: /
+
+# Specific rules for major search engines
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Slurp
+Allow: /
+Crawl-delay: 1
+
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 1
+
+User-agent: YandexBot
+Allow: /
+Crawl-delay: 1
+
+# Block specific file types that shouldn't be indexed
+Disallow: /*.json$
+Disallow: /*.xml$
+Disallow: /*.txt$
+Disallow: /*.log$
+Disallow: /*.md$
+Disallow: /*.git$
+Disallow: /*.env$
+Disallow: /*.config$
+Disallow: /*.lock$
+Disallow: /*.map$
+
+# Block admin and development files
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /logs/
+Disallow: /backup/
+Disallow: /old/
+Disallow: /test/
+Disallow: /dev/
+Disallow: /staging/
+
+# Block API endpoints (if any)
+Disallow: /api/
+Disallow: /rest/
+Disallow: /graphql/
+
+# Block search and filter pages
+Disallow: /search?
+Disallow: /filter?
+Disallow: /sort?
+
+# Block pagination beyond reasonable limits
+Disallow: /page/1000+
+Disallow: /p/1000+
+
+# Allow important directories
+Allow: /src/
+Allow: /components/
+Allow: /img/
+Allow: /assets/
+Allow: /public/
+
+# Sitemap location
+Sitemap: https://ogeobubu.netlify.app/sitemap.xml
+
+# Additional sitemaps for different content types
+Sitemap: https://ogeobubu.netlify.app/sitemap-projects.xml
+Sitemap: https://ogeobubu.netlify.app/sitemap-skills.xml
+
+# Crawl delay for all bots (be respectful)
+Crawl-delay: 1
+
+# Host directive
+Host: https://ogeobubu.netlify.app
+
+# Additional directives for better SEO
+# Allow JavaScript and CSS files for proper rendering
+Allow: /*.js$
+Allow: /*.css$
+Allow: /*.png$
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.gif$
+Allow: /*.svg$
+Allow: /*.ico$
+Allow: /*.webp$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+Allow: /*.eot$
+
+# Block unnecessary file types
+Disallow: /*.pdf$
+Disallow: /*.doc$
+Disallow: /*.docx$
+Disallow: /*.xls$
+Disallow: /*.xlsx$
+Disallow: /*.ppt$
+Disallow: /*.pptx$
+Disallow: /*.zip$
+Disallow: /*.rar$
+Disallow: /*.tar$
+Disallow: /*.gz$
+
+# Block query parameters that don't add value
+Disallow: /*?utm_source=
+Disallow: /*?utm_medium=
+Disallow: /*?utm_campaign=
+Disallow: /*?utm_term=
+Disallow: /*?utm_content=
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+Disallow: /*?msclkid=
+Disallow: /*?ref=
+Disallow: /*?source=
+Disallow: /*?campaign=
+Disallow: /*?medium=
+Disallow: /*?term=
+Disallow: /*?content=
+
+# Allow important query parameters
+Allow: /*?id=
+Allow: /*?slug=
+Allow: /*?page=
+Allow: /*?category=
+Allow: /*?tag=
+
+# Block social media crawlers from certain areas
+User-agent: facebookexternalhit
+Disallow: /admin/
+Disallow: /private/
+Allow: /
+
+User-agent: Twitterbot
+Disallow: /admin/
+Disallow: /private/
+Allow: /
+
+User-agent: LinkedInBot
+Disallow: /admin/
+Disallow: /private/
+Allow: /
+
+# Block archive.org from certain areas
+User-agent: ia_archiver
+Disallow: /admin/
+Disallow: /private/
+Allow: /
+
+# Block screenshot services
+User-agent: ScreenshotBot
+Disallow: /
+
+User-agent: PagePeeker
+Disallow: /
+
+User-agent: URL2PNG
+Disallow: /
+
+# Block SEO tools that might cause issues
+User-agent: AhrefsBot
+Crawl-delay: 10
+
+User-agent: SemrushBot
+Crawl-delay: 10
+
+User-agent: MJ12bot
+Crawl-delay: 10
+
+User-agent: DotBot
+Crawl-delay: 10
+
+# Block aggressive crawlers
+User-agent: *
+Disallow: /admin/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /cache/
+Disallow: /logs/
+Disallow: /backup/
+Disallow: /old/
+Disallow: /test/
+Disallow: /dev/
+Disallow: /staging/
+Allow: /
+
+# Final crawl delay for all bots
+Crawl-delay: 1
