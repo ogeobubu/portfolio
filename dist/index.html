@@ -1,51 +1,789 @@
+<!DOCTYPE html>
+<html lang="en">
 <head>
+  <!-- Essential Meta Tags -->
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="theme-color" content="#000000" />
-  <meta name="robots" content="index, follow" />
-
-  <title>Oge Obubu | Frontend Developer, MERN Stack Engineer</title>
-  <meta name="description" content="Oge Obubu is a passionate Frontend Developer and MERN Stack Engineer based in Lagos, Nigeria, building scalable and user-friendly web apps." />
-  <meta name="keywords" content="Oge Obubu, frontend developer, MERN stack, React developer, Nigeria, JavaScript, web developer, Lagos, portfolio, developer, UI/UX, web apps" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="theme-color" content="#3b82f6" />
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+  <meta name="googlebot" content="index, follow" />
+  <meta name="bingbot" content="index, follow" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Oge Obubu | Senior Frontend Engineer & MERN Stack Developer | Nigeria</title>
+  <meta name="title" content="Oge Obubu | Senior Frontend Engineer & MERN Stack Developer | Nigeria" />
+  <meta name="description" content="Oge Obubu is a Senior Frontend Engineer with 4+ years of experience specializing in React, TypeScript, and MERN stack development. Expert in building secure, scalable applications for fintech, legal platforms, and high-security industries. Based in Lagos, Nigeria. View portfolio of 50+ projects." />
+  <meta name="keywords" content="Oge Obubu, frontend developer, MERN stack developer, React developer, TypeScript developer, JavaScript developer, web developer, Nigeria, Lagos, UI/UX developer, full-stack developer, software engineer, React.js, Node.js, MongoDB, Express.js, Next.js, Tailwind CSS, portfolio, developer, web applications, fintech developer, legal platform developer, security-focused developer, responsive design, progressive web apps, mobile-first development" />
   <meta name="author" content="Oge Obubu" />
+  <meta name="language" content="English" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="rating" content="general" />
+  <meta name="distribution" content="global" />
+  
+  <!-- Canonical URL -->
   <link rel="canonical" href="https://ogeobubu.netlify.app" />
+  
+  <!-- Google Site Verification -->
   <meta name="google-site-verification" content="nG6oYzGQ_hEve1IoZ5vuZ66tXAkNdQfi0Ddr091613s" />
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" href="./assets/ogeobubu-logo-removebg-preview-B3XCfjTH.png" media="(prefers-color-scheme: dark)">
-  <link rel="icon" type="image/png" href="./assets/ogeobubu-logo-removebg-preview-B3XCfjTH.png" media="(prefers-color-scheme: light)">
-  <!-- OR one single favicon -->
-  <!-- <link rel="icon" type="image/png" href="/favicon.png"> -->
-
-  <!-- Open Graph -->
+  <!-- Verification Meta Tags -->
+  <meta name="yandex-verification" content="f833aa15e2d6c20e" />
+  <meta name="msvalidate.01" content="ED49FA4A6251C3F4DB2E651D832ADDF2" />
+  
+  <!-- Favicon and App Icons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/ogeobubu-logo-removebg-preview-B3XCfjTH.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/ogeobubu-logo-removebg-preview-B3XCfjTH.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/images/ogeobubu-logo-removebg-preview-B3XCfjTH.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="./assets/images/ogeobubu-logo-removebg-preview-B3XCfjTH.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="./assets/images/ogeobubu-logo-removebg-preview-B3XCfjTH.png" />
+  
+  <!-- Open Graph Meta Tags -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Oge Obubu | Frontend Developer, MERN Stack Engineer" />
-  <meta property="og:description" content="Scalable, user-centric applications built with React, JavaScript, and the MERN stack." />
-  <meta property="og:image" content="https://ogeobubu.netlify.app/logo-preview.png" />
+  <meta property="og:title" content="Oge Obubu | Senior Frontend Engineer & MERN Stack Developer | Nigeria" />
+  <meta property="og:description" content="Senior Frontend Engineer with 4+ years experience in React, TypeScript, and MERN stack. Expert in building secure, scalable applications for fintech and legal platforms. Based in Lagos, Nigeria." />
+  <meta property="og:image" content="https://ogeobubu.netlify.app/ogeobubu-logo-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Oge Obubu - Frontend Engineer Portfolio" />
   <meta property="og:url" content="https://ogeobubu.netlify.app" />
   <meta property="og:site_name" content="Oge Obubu Portfolio" />
-
-  <!-- Twitter Card -->
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  
+  <!-- Twitter Card Meta Tags -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Oge Obubu | Frontend Developer" />
-  <meta name="twitter:description" content="Frontend and MERN Stack Developer based in Lagos, Nigeria." />
+  <meta name="twitter:title" content="Oge Obubu | Senior Frontend Engineer & MERN Stack Developer" />
+  <meta name="twitter:description" content="Senior Frontend Engineer with 4+ years experience in React, TypeScript, and MERN stack. Expert in building secure, scalable applications for fintech and legal platforms." />
   <meta name="twitter:creator" content="@ogeobubu" />
-  <meta name="twitter:image" content="https://ogeobubu.netlify.app/logo-preview.png" />
   <meta name="twitter:site" content="@ogeobubu" />
+  <meta name="twitter:image" content="https://ogeobubu.netlify.app/ogeobubu-logo-preview.png" />
+  <meta name="twitter:image:alt" content="Oge Obubu - Frontend Engineer Portfolio" />
   <meta name="twitter:app:country" content="NG" />
-
-  <!-- Bootstrap -->
+  
+  <!-- Additional Social Media Meta Tags -->
+  <meta property="article:author" content="Oge Obubu" />
+  <meta property="article:publisher" content="Oge Obubu" />
+  <meta name="twitter:label1" content="Est. reading time" />
+  <meta name="twitter:data1" content="3 minutes" />
+  
+  <!-- Performance and Security -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-TileColor" content="#3b82f6" />
+  <meta name="msapplication-config" content="/browserconfig.xml" />
+  
+  <!-- Preconnect for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://kit.fontawesome.com" />
+  <link rel="dns-prefetch" href="https://stackpath.bootstrapcdn.com" />
+  
+  <!-- External Stylesheets -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
-
-  <!-- Font Awesome -->
   <script src="https://kit.fontawesome.com/ae5a77dfa6.js" crossorigin="anonymous"></script>
-
-  <!-- PWA Manifest -->
+  
+  <!-- Web App Manifest -->
   <link rel="manifest" href="./assets/manifest-B7-Qycu1.json" />
-  <script type="module" crossorigin src="./assets/index-DbodwoLc.js"></script>
-  <link rel="stylesheet" crossorigin href="./assets/index-DwHA1M6f.css">
+  
+  <!-- Comprehensive Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Oge Obubu",
+    "alternateName": "Oge Obubu",
+    "url": "https://ogeobubu.netlify.app",
+    "image": "https://ogeobubu.netlify.app/ogeobubu-logo-preview.png",
+    "sameAs": [
+      "https://github.com/ogeobubu",
+      "https://linkedin.com/in/oge-obubu",
+      "https://x.com/ogeobubu"
+    ],
+    "jobTitle": "Senior Frontend Engineer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "FinesseCodes"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lagos",
+      "addressCountry": "NG",
+      "addressRegion": "Lagos State"
+    },
+    "knowsAbout": [
+      "React.js",
+      "TypeScript",
+      "JavaScript",
+      "Node.js",
+      "MongoDB",
+      "Express.js",
+      "Next.js",
+      "Tailwind CSS",
+      "Frontend Development",
+      "MERN Stack",
+      "Web Development",
+      "UI/UX Design",
+      "Progressive Web Apps",
+      "Mobile-First Development",
+      "Fintech Applications",
+      "Legal Platform Development",
+      "Security-Focused Development"
+    ],
+    "hasOccupation": {
+      "@type": "Occupation",
+      "name": "Senior Frontend Engineer",
+      "description": "Expert in building secure, scalable, and responsive web applications using modern technologies like React, TypeScript, and the MERN stack."
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Computer Science Graduate"
+    },
+    "knowsLanguage": ["English", "JavaScript", "TypeScript", "HTML", "CSS"],
+    "description": "Senior Frontend Engineer with 4+ years of experience specializing in React, TypeScript, and MERN stack development. Expert in building secure, scalable applications for fintech, legal platforms, and high-security industries.",
+    "birthDate": "1995-01-01",
+    "nationality": "Nigerian",
+    "gender": "Male"
+  }
+  </script>
+  
+  <!-- Organization Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Oge Obubu Portfolio",
+    "url": "https://ogeobubu.netlify.app",
+    "logo": "https://ogeobubu.netlify.app/ogeobubu-logo-preview.png",
+    "description": "Portfolio website showcasing the work of Oge Obubu, a Senior Frontend Engineer specializing in React, TypeScript, and MERN stack development.",
+    "sameAs": [
+      "https://github.com/ogeobubu",
+      "https://linkedin.com/in/oge-obubu"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "customer service",
+      "email": "ogeobubu@gmail.com",
+      "availableLanguage": "English"
+    }
+  }
+  </script>
+  
+  <!-- WebSite Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Oge Obubu Portfolio",
+    "url": "https://ogeobubu.netlify.app",
+    "description": "Portfolio website of Oge Obubu, a Senior Frontend Engineer with expertise in React, TypeScript, and MERN stack development.",
+    "author": {
+      "@type": "Person",
+      "name": "Oge Obubu"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Oge Obubu Portfolio"
+    },
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://ogeobubu.netlify.app?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  
+  <!-- CreativeWork Structured Data for Portfolio -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    "name": "Oge Obubu Portfolio",
+    "description": "Portfolio showcasing 50+ projects including fintech applications, legal platforms, and high-security web applications built with React, TypeScript, and MERN stack.",
+    "author": {
+      "@type": "Person",
+      "name": "Oge Obubu"
+    },
+    "creator": {
+      "@type": "Person",
+      "name": "Oge Obubu"
+    },
+    "dateCreated": "2020-01-01",
+    "dateModified": "2024-01-01",
+    "genre": "Web Development Portfolio",
+    "keywords": "React, TypeScript, JavaScript, MERN Stack, Frontend Development, Web Development, Portfolio",
+    "inLanguage": "en-US",
+    "isAccessibleForFree": true,
+    "license": "https://creativecommons.org/licenses/by/4.0/"
+  }
+  </script>
+  
+  <!-- BreadcrumbList Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ogeobubu.netlify.app"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "About",
+        "item": "https://ogeobubu.netlify.app#about"
+      },
+      {
+        "@type": "ListItem",
+        "position": 3,
+        "name": "Skills",
+        "item": "https://ogeobubu.netlify.app#skills"
+      },
+      {
+        "@type": "ListItem",
+        "position": 4,
+        "name": "Projects",
+        "item": "https://ogeobubu.netlify.app#projects"
+      },
+      {
+        "@type": "ListItem",
+        "position": 5,
+        "name": "Contact",
+        "item": "https://ogeobubu.netlify.app#contact"
+      }
+    ]
+  }
+  </script>
+  
+  <!-- FAQ Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What technologies does Oge Obubu specialize in?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oge Obubu specializes in React, TypeScript, JavaScript, Node.js, MongoDB, Express.js, Next.js, and Tailwind CSS. He has 4+ years of experience in MERN stack development and building secure, scalable applications."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What types of projects does Oge Obubu work on?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oge Obubu works on fintech applications, legal platforms, high-security web applications, progressive web apps, and mobile-first responsive designs. He has completed 50+ projects across various industries."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Where is Oge Obubu located?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Oge Obubu is based in Lagos, Nigeria, and is available for remote work worldwide."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How can I contact Oge Obubu?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You can contact Oge Obubu via email at ogeobubu@gmail.com, through LinkedIn, or by visiting his portfolio website at https://ogeobubu.netlify.app"
+        }
+      }
+    ]
+  }
+  </script>
+  
+  <!-- Local Business Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Oge Obubu - Frontend Development Services",
+    "description": "Professional frontend development services specializing in React, TypeScript, and MERN stack applications.",
+    "url": "https://ogeobubu.netlify.app",
+    "telephone": "+234-XXX-XXX-XXXX",
+    "email": "ogeobubu@gmail.com",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Lagos",
+      "addressCountry": "NG",
+      "addressRegion": "Lagos State"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "6.5244",
+      "longitude": "3.3792"
+    },
+    "openingHours": "Mo-Su 09:00-18:00",
+    "priceRange": "$$",
+    "currenciesAccepted": "USD, NGN",
+    "paymentAccepted": "Credit Card, Bank Transfer, PayPal",
+    "areaServed": "Worldwide",
+    "serviceArea": {
+      "@type": "GeoCircle",
+      "geoMidpoint": {
+        "@type": "GeoCoordinates",
+        "latitude": "6.5244",
+        "longitude": "3.3792"
+      },
+      "geoRadius": "10000"
+    },
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Web Development Services",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Frontend Development",
+            "description": "React, TypeScript, and modern web development"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "MERN Stack Development",
+            "description": "Full-stack web applications using MongoDB, Express, React, Node.js"
+          }
+        },
+        {
+          "@type": "Offer",
+          "itemOffered": {
+            "@type": "Service",
+            "name": "Progressive Web Apps",
+            "description": "Mobile-first responsive web applications"
+          }
+        }
+      ]
+    }
+  }
+  </script>
+  
+  <!-- Article Structured Data for Blog-like Content -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Oge Obubu - Senior Frontend Engineer Portfolio",
+    "description": "Portfolio showcasing the work of Oge Obubu, a Senior Frontend Engineer with 4+ years of experience in React, TypeScript, and MERN stack development.",
+    "image": "https://ogeobubu.netlify.app/ogeobubu-logo-preview.png",
+    "author": {
+      "@type": "Person",
+      "name": "Oge Obubu"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Oge Obubu Portfolio",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ogeobubu.netlify.app/ogeobubu-logo-preview.png"
+      }
+    },
+    "datePublished": "2020-01-01",
+    "dateModified": "2024-01-01",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://ogeobubu.netlify.app"
+    },
+    "articleSection": "Technology",
+    "keywords": "React, TypeScript, JavaScript, MERN Stack, Frontend Development, Web Development, Portfolio, Nigeria, Lagos"
+  }
+  </script>
+  
+  <!-- Performance Optimization -->
+  <link rel="preload" href="data:application/octet-stream;base64,aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IFJlYWN0RE9NIGZyb20gInJlYWN0LWRvbS9jbGllbnQiOyAgLy8gVXBkYXRlZCBmb3IgUmVhY3QgMTgKaW1wb3J0ICIuL2luZGV4LmNzcyI7CmltcG9ydCBBcHAgZnJvbSAiLi9BcHAiOwoKY29uc3Qgcm9vdCA9IFJlYWN0RE9NLmNyZWF0ZVJvb3QoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInJvb3QiKSk7CnJvb3QucmVuZGVyKAogIDxSZWFjdC5TdHJpY3RNb2RlPgogICAgPEFwcCAvPgogIDwvUmVhY3QuU3RyaWN0TW9kZT4KKTs=" as="script" />
+  <link rel="preload" href="./assets/images/ogeobubu-logo-removebg-preview-B3XCfjTH.png" as="image" />
+  
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://kit.fontawesome.com https://stackpath.bootstrapcdn.com; style-src 'self' 'unsafe-inline' https://stackpath.bootstrapcdn.com; img-src 'self' data: https:; font-src 'self' https://kit.fontawesome.com;" />
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  
+  <!-- Mobile App Meta Tags -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Oge Obubu Portfolio" />
+  
+  <!-- Additional SEO Meta Tags -->
+  <meta name="application-name" content="Oge Obubu Portfolio" />
+  <meta name="msapplication-tooltip" content="Oge Obubu - Senior Frontend Engineer Portfolio" />
+  <meta name="msapplication-starturl" content="/" />
+  <meta name="msapplication-navbutton-color" content="#3b82f6" />
+  <meta name="msapplication-TileImage" content="/src/components/img/ogeobubu-logo-removebg-preview.png" />
+  
+  <!-- Geo Meta Tags -->
+  <meta name="geo.region" content="NG-LA" />
+  <meta name="geo.placename" content="Lagos" />
+  <meta name="geo.position" content="6.5244;3.3792" />
+  <meta name="ICBM" content="6.5244, 3.3792" />
+  
+  <!-- Additional SEO Meta Tags for Better Rankings -->
+  <meta name="coverage" content="Worldwide" />
+  <meta name="distribution" content="Global" />
+  <meta name="rating" content="General" />
+  <meta name="revisit-after" content="1 days" />
+  <meta name="robots" content="all" />
+  <meta name="googlebot" content="all" />
+  <meta name="slurp" content="all" />
+  <meta name="msnbot" content="all" />
+  <meta name="teoma" content="all" />
+  
+  <!-- Page Speed and Performance -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Oge Obubu Portfolio" />
+  
+  <!-- Additional Social Media Tags -->
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:secure_url" content="https://ogeobubu.netlify.app/ogeobubu-logo-preview.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:alt" content="Oge Obubu - Senior Frontend Engineer Portfolio" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:locale:alternate" content="en_GB" />
+  <meta property="og:locale:alternate" content="en_CA" />
+  <meta property="og:locale:alternate" content="en_AU" />
+  
+  <!-- Twitter Additional Tags -->
+  <meta name="twitter:label1" content="Est. reading time" />
+  <meta name="twitter:data1" content="3 minutes" />
+  <meta name="twitter:label2" content="Written by" />
+  <meta name="twitter:data2" content="Oge Obubu" />
+  
+  <!-- Additional Performance Tags -->
+  <meta name="theme-color" content="#3b82f6" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1f2937" media="(prefers-color-scheme: dark)" />
+  <meta name="color-scheme" content="light dark" />
+  
+  <!-- Additional Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="DENY" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()" />
+  
+  <!-- Additional Cache Control -->
+  <meta http-equiv="Cache-Control" content="public, max-age=31536000, immutable" />
+  <meta http-equiv="Expires" content="Thu, 31 Dec 2024 23:59:59 GMT" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  
+  <!-- Additional DNS Prefetch -->
+  <link rel="dns-prefetch" href="//www.google.com" />
+  <link rel="dns-prefetch" href="//www.google-analytics.com" />
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+  <link rel="dns-prefetch" href="//www.google.com" />
+  <link rel="dns-prefetch" href="//www.gstatic.com" />
+  <link rel="dns-prefetch" href="//www.youtube.com" />
+  <link rel="dns-prefetch" href="//www.facebook.com" />
+  <link rel="dns-prefetch" href="//www.twitter.com" />
+  <link rel="dns-prefetch" href="//www.linkedin.com" />
+  <link rel="dns-prefetch" href="//www.github.com" />
+  
+  <!-- Additional Preconnect -->
+  <link rel="preconnect" href="https://www.google.com" />
+  <link rel="preconnect" href="https://www.google-analytics.com" />
+  <link rel="preconnect" href="https://www.googletagmanager.com" />
+  
+  <!-- Additional Preload -->
+  <link rel="preload" href="./assets/images/ogeobubu-logo-removebg-preview-B3XCfjTH.png" as="image" type="image/png" />
+  <link rel="preload" href="./assets/images/ogeobubu-logo-preview-tcqJjDOo.png" as="image" type="image/png" />
+  
+  <!-- Additional Resource Hints -->
+  <link rel="prefetch" href="./assets/images/bg-CjCCe8R5.jpg" />
+  <link rel="prefetch" href="./assets/images/main-BShr7keb.jpg" />
+  
+  <!-- Additional Meta Tags for Better SEO -->
+  <meta name="application-name" content="Oge Obubu Portfolio" />
+  <meta name="msapplication-tooltip" content="Oge Obubu - Senior Frontend Engineer Portfolio" />
+  <meta name="msapplication-starturl" content="/" />
+  <meta name="msapplication-navbutton-color" content="#3b82f6" />
+  <meta name="msapplication-TileImage" content="/src/components/img/ogeobubu-logo-removebg-preview.png" />
+  <meta name="msapplication-TileColor" content="#3b82f6" />
+  <meta name="msapplication-config" content="/browserconfig.xml" />
+  
+  <!-- Additional Geo Tags -->
+  <meta name="geo.region" content="NG-LA" />
+  <meta name="geo.placename" content="Lagos" />
+  <meta name="geo.position" content="6.5244;3.3792" />
+  <meta name="ICBM" content="6.5244, 3.3792" />
+  <meta name="geo.country" content="Nigeria" />
+  <meta name="geo.city" content="Lagos" />
+  
+  <!-- Additional Language Tags -->
+  <meta name="language" content="English" />
+  <meta name="languages" content="en, en-US, en-GB" />
+  <meta name="language-alternate" content="en-US" />
+  <meta name="language-alternate" content="en-GB" />
+  
+  <!-- Additional Content Tags -->
+  <meta name="content-type" content="text/html; charset=utf-8" />
+  <meta name="content-language" content="en-US" />
+  <meta name="content-script-type" content="text/javascript" />
+  <meta name="content-style-type" content="text/css" />
+  
+  <!-- Additional Accessibility Tags -->
+  <meta name="accessibility-control" content="full-keyboard" />
+  <meta name="accessibility-feature" content="high-contrast" />
+  <meta name="accessibility-hazard" content="none" />
+  <meta name="accessibility-mode" content="full" />
+  
+  <!-- Additional Mobile Tags -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Oge Obubu Portfolio" />
+  <meta name="apple-touch-fullscreen" content="yes" />
+  <meta name="apple-mobile-web-app-orientations" content="portrait" />
+  
+  <!-- Additional PWA Tags -->
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <meta name="apple-mobile-web-app-title" content="Oge Obubu Portfolio" />
+  
+  <!-- Additional Performance Tags -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="format-detection" content="date=no" />
+  <meta name="format-detection" content="address=no" />
+  <meta name="format-detection" content="email=no" />
+  
+  <!-- Additional SEO Tags -->
+  <meta name="generator" content="React, TypeScript, Vite" />
+  <meta name="creator" content="Oge Obubu" />
+  <meta name="publisher" content="Oge Obubu" />
+  <meta name="copyright" content="Oge Obubu" />
+  <meta name="rights" content="All rights reserved" />
+  <meta name="audience" content="Developers, Hiring Managers, Recruiters, Tech Companies" />
+  <meta name="target" content="all" />
+  <meta name="classification" content="Portfolio, Web Development, Technology" />
+  <meta name="category" content="Technology" />
+  <meta name="subject" content="Web Development, Frontend Engineering, React, TypeScript" />
+  <meta name="topic" content="Portfolio, Web Development, Frontend Engineering" />
+  <meta name="summary" content="Oge Obubu is a Senior Frontend Engineer with 4+ years of experience specializing in React, TypeScript, and MERN stack development." />
+  <meta name="abstract" content="Portfolio website showcasing the work of Oge Obubu, a Senior Frontend Engineer specializing in React, TypeScript, and MERN stack development." />
+  <meta name="description" content="Oge Obubu is a Senior Frontend Engineer with 4+ years of experience specializing in React, TypeScript, and MERN stack development. Expert in building secure, scalable applications for fintech, legal platforms, and high-security industries. Based in Lagos, Nigeria. View portfolio of 50+ projects." />
+  <meta name="keywords" content="Oge Obubu, frontend developer, MERN stack developer, React developer, TypeScript developer, JavaScript developer, web developer, Nigeria, Lagos, UI/UX developer, full-stack developer, software engineer, React.js, Node.js, MongoDB, Express.js, Next.js, Tailwind CSS, portfolio, developer, web applications, fintech developer, legal platform developer, security-focused developer, responsive design, progressive web apps, mobile-first development, senior frontend engineer, web development services, React development, TypeScript development, JavaScript development, Node.js development, MongoDB development, Express.js development, Next.js development, Tailwind CSS development, frontend engineering, web engineering, software development, application development, website development, web application development, mobile web development, responsive web development, progressive web development, modern web development, React.js development, TypeScript development, JavaScript development, Node.js development, MongoDB development, Express.js development, Next.js development, Tailwind CSS development, frontend engineering, web engineering, software development, application development, website development, web application development, mobile web development, responsive web development, progressive web development, modern web development" />
+  
+  <!-- Additional Performance Meta Tags -->
+  <meta name="theme-color" content="#3b82f6" media="(prefers-color-scheme: light)" />
+  <meta name="theme-color" content="#1f2937" media="(prefers-color-scheme: dark)" />
+  
+  <!-- Cache Control -->
+  <meta http-equiv="Cache-Control" content="public, max-age=31536000" />
+  
+  <!-- DNS Prefetch for External Resources -->
+  <link rel="dns-prefetch" href="//fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="//fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="//www.google-analytics.com" />
+  <link rel="dns-prefetch" href="//www.googletagmanager.com" />
+  
+  <!-- Resource Hints for Performance -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="dns-prefetch" href="https://kit.fontawesome.com" />
+  <link rel="dns-prefetch" href="https://stackpath.bootstrapcdn.com" />
+  <link rel="dns-prefetch" href="https://www.google-analytics.com" />
+  <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
+  
+  <!-- Preload critical resources -->
+  <link rel="preload" href="data:application/octet-stream;base64,aW1wb3J0IFJlYWN0IGZyb20gInJlYWN0IjsKaW1wb3J0IFJlYWN0RE9NIGZyb20gInJlYWN0LWRvbS9jbGllbnQiOyAgLy8gVXBkYXRlZCBmb3IgUmVhY3QgMTgKaW1wb3J0ICIuL2luZGV4LmNzcyI7CmltcG9ydCBBcHAgZnJvbSAiLi9BcHAiOwoKY29uc3Qgcm9vdCA9IFJlYWN0RE9NLmNyZWF0ZVJvb3QoZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoInJvb3QiKSk7CnJvb3QucmVuZGVyKAogIDxSZWFjdC5TdHJpY3RNb2RlPgogICAgPEFwcCAvPgogIDwvUmVhY3QuU3RyaWN0TW9kZT4KKTs=" as="script" type="module" />
+  <link rel="preload" href="./assets/images/ogeobubu-logo-removebg-preview-B3XCfjTH.png" as="image" type="image/png" />
+  
+  <!-- Prefetch non-critical resources -->
+  <link rel="prefetch" href="./assets/images/bg-CjCCe8R5.jpg" as="image" />
+  <link rel="prefetch" href="./assets/images/main-BShr7keb.jpg" as="image" />
+  
+  <!-- Critical CSS Inline for Above-the-Fold Content -->
+  <style>body{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;margin:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}#root{min-height:100vh}.loading{align-items:center;display:flex;height:100vh;justify-content:center}.sr-only{height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px;clip:rect(0,0,0,0);border:0;white-space:nowrap}.sr-only-focusable:focus{height:auto;position:static;width:auto}@keyframes spin-slow{0%{transform:rotate(0deg)}to{transform:rotate(1turn)}}.animate-spin-slow{animation:spin-slow 20s linear infinite}.navbar{position:fixed;top:0;width:100%;z-index:1000}.hero-section{align-items:center;display:flex;min-height:100vh}.container{margin:0 auto;max-width:1200px;padding:0 1rem}.preloader{background:#fff;height:100%;left:0;position:fixed;top:0;width:100%;z-index:9999}.fade-in{animation:fadeIn .5s ease-in forwards;opacity:0}@keyframes fadeIn{to{opacity:1}}img{height:auto;max-width:100%}.lazy{opacity:0;transition:opacity .3s}.lazy.loaded{opacity:1}@font-face{font-display:swap;font-family:SystemFont}*{box-sizing:border-box}html{scroll-behavior:smooth}.will-change{will-change:transform}.transform-gpu{transform:translateZ(0)}</style>
+  <script type="module" crossorigin src="./assets/js/index-DyNA9ssh.js"></script>
+  <link rel="modulepreload" crossorigin href="./assets/js/react-vendor-DtX1tuCI.js">
+  <link rel="modulepreload" crossorigin href="./assets/js/icons-vendor-DZL7AVSR.js">
+  <link rel="modulepreload" crossorigin href="./assets/js/projects-DA9azc9k.js">
+  <link rel="modulepreload" crossorigin href="./assets/js/hero-C_F4MJgY.js">
+  <link rel="modulepreload" crossorigin href="./assets/js/skills-CoVLu6xA.js">
+  <link rel="modulepreload" crossorigin href="./assets/js/experience-CBoUc8ou.js">
+  <link rel="modulepreload" crossorigin href="./assets/js/contact-GFpZ0DsB.js">
+  <link rel="modulepreload" crossorigin href="./assets/js/portfolio-C2QPaOPK.js">
+  <link rel="stylesheet" crossorigin href="./assets/index-oByUR_YU.css">
 </head>
+
 <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-  </body>
+  <!-- Skip to main content for accessibility -->
+  <a href="#main-content" class="sr-only sr-only-focusable">Skip to main content</a>
+  
+  <!-- NoScript fallback -->
+  <noscript>
+    <div style="padding: 20px; text-align: center; background: #f8f9fa; border: 1px solid #dee2e6; margin: 20px; border-radius: 5px;">
+      <h2>JavaScript Required</h2>
+      <p>This application requires JavaScript to function properly. Please enable JavaScript in your browser settings to view this portfolio.</p>
+      <p>If you need to contact Oge Obubu, please email: <a href="mailto:ogeobubu@gmail.com">ogeobubu@gmail.com</a></p>
+    </div>
+  </noscript>
+  
+  <!-- Main application container -->
+  <div id="root" role="main" aria-label="Oge Obubu Portfolio">
+    <!-- Loading state for better UX -->
+    <div class="loading" id="loading">
+      <div style="text-align: center;">
+        <img src="./assets/images/ogeobubu-logo-removebg-preview-B3XCfjTH.png" alt="Oge Obubu Logo" style="width: 80px; height: 80px; border-radius: 50%;" />
+        <p style="margin-top: 20px; color: #6b7280;">Loading Portfolio...</p>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Main content landmark -->
+  <main id="main-content" style="display: none;">
+    <!-- Content will be rendered here by React -->
+  </main>
+
+  
+  <!-- Scripts with Performance Optimization -->
+  
+  <!-- Service Worker Registration -->
+  <script>
+    // Register service worker for caching
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(registration => console.log('SW registered:', registration))
+          .catch(error => console.log('SW registration failed:', error));
+      });
+    }
+  </script>
+  
+  <!-- Performance monitoring and SEO optimization -->
+  <script>
+    // Performance monitoring
+    window.addEventListener('load', function() {
+      if ('performance' in window) {
+        const perfData = performance.getEntriesByType('navigation')[0];
+        console.log('Page load time:', perfData.loadEventEnd - perfData.loadEventStart, 'ms');
+        
+        // Send performance data to analytics if available
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'timing_complete', {
+            name: 'load',
+            value: Math.round(perfData.loadEventEnd - perfData.loadEventStart)
+          });
+        }
+      }
+    });
+    
+    // Hide loading screen when app is ready
+    window.addEventListener('DOMContentLoaded', function() {
+      const loading = document.getElementById('loading');
+      const mainContent = document.getElementById('main-content');
+      const seoFooter = document.getElementById('seo-footer');
+      
+      if (loading) loading.style.display = 'none';
+      if (mainContent) mainContent.style.display = 'block';
+      if (seoFooter) seoFooter.style.display = 'block';
+    });
+    
+    // SEO optimization: Track user engagement
+    let startTime = Date.now();
+    let hasScrolled = false;
+    let hasClicked = false;
+    
+    // Track scroll depth
+    window.addEventListener('scroll', function() {
+      if (!hasScrolled) {
+        hasScrolled = true;
+        const scrollDepth = Math.round((window.scrollY / (document.body.scrollHeight - window.innerHeight)) * 100);
+        console.log('User scrolled to:', scrollDepth + '%');
+        
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'scroll_depth', {
+            value: scrollDepth
+          });
+        }
+      }
+    });
+    
+    // Track clicks
+    document.addEventListener('click', function() {
+      if (!hasClicked) {
+        hasClicked = true;
+        const timeOnPage = Date.now() - startTime;
+        console.log('User engaged after:', timeOnPage + 'ms');
+        
+        if (typeof gtag !== 'undefined') {
+          gtag('event', 'user_engagement', {
+            value: timeOnPage
+          });
+        }
+      }
+    });
+    
+    // Track time on page
+    window.addEventListener('beforeunload', function() {
+      const timeOnPage = Date.now() - startTime;
+      console.log('Total time on page:', timeOnPage + 'ms');
+      
+      if (typeof gtag !== 'undefined') {
+        gtag('event', 'time_on_page', {
+          value: timeOnPage
+        });
+      }
+    });
+    
+    // SEO: Add structured data for better search visibility
+    const additionalStructuredData = {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Oge Obubu Portfolio",
+      "description": "Portfolio website of Oge Obubu, a Senior Frontend Engineer with expertise in React, TypeScript, and MERN stack development.",
+      "url": "https://ogeobubu.netlify.app",
+      "mainEntity": {
+        "@type": "Person",
+        "name": "Oge Obubu",
+        "jobTitle": "Senior Frontend Engineer",
+        "description": "Expert in React, TypeScript, and MERN stack development"
+      },
+      "breadcrumb": {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ogeobubu.netlify.app"
+          }
+        ]
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "https://ogeobubu.netlify.app?q={search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    };
+    
+    // Add the structured data to the page
+    const script = document.createElement('script');
+    script.type = 'application/ld+json';
+    script.textContent = JSON.stringify(additionalStructuredData);
+    document.head.appendChild(script);
+  </script>
+  
+  <!-- Google Analytics (if needed) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=GTM-MHNQSS2N"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'GTM-MHNQSS2N');
+  </script>
+</body>
+</html>

@@ -13,8 +13,10 @@
     "optimize-images": "node scripts/optimize-images.js",
     "optimize-css": "node scripts/optimize-css.js",
     "monitor-performance": "node scripts/performance-monitor.js",
+    "boost-performance": "node scripts/boost-performance.js",
     "build:optimized": "npm run optimize-images && npm run optimize-css && npm run build",
     "build:full": "npm run build:optimized && npm run monitor-performance",
+    "build:boosted": "npm run boost-performance && npm run build:optimized",
     "test": "vitest"
   },
   "dependencies": {

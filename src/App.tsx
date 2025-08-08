@@ -11,6 +11,7 @@ import { SocialLinks } from './components/SocialLinks';
 import { mainProjects, sideProjects } from './data/projects';
 import { socialLinks } from './data/socialLinks';
 import { Preloader } from './components/Preloader';
+import { PerformanceOptimizer, LazyLoad, PerformanceMetrics } from './components/PerformanceOptimizer';
 
 const Portfolio: React.FC = () => {
   const [isDark, setIsDark] = useState<boolean>(true);
@@ -108,15 +109,16 @@ const Portfolio: React.FC = () => {
   };
 
   return (
-    <div className={`min-h-screen transition-all duration-700 ${isDark ? 'bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white' : 'bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900'}`}>
-      {showPreloader && <Preloader onComplete={handlePreloaderComplete} isDark={isDark} />}
+    <PerformanceOptimizer>
+      <div className={`min-h-screen transition-all duration-700 ${isDark ? 'bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white' : 'bg-gradient-to-br from-gray-50 via-white to-gray-100 text-gray-900'}`}>
+        {showPreloader && <Preloader onComplete={handlePreloaderComplete} isDark={isDark} />}
 
-      {!showPreloader && (<>
-      <EnhancedNavbar 
-        isDark={isDark} 
-        activeSection={activeSection} 
-        scrollToSection={scrollToSection}
-      />
+        {!showPreloader && (<>
+        <EnhancedNavbar 
+          isDark={isDark} 
+          activeSection={activeSection} 
+          scrollToSection={scrollToSection}
+        />
       <div className="fixed bottom-4 left-4 z-50">
         <ThemeToggle isDark={isDark} toggleTheme={toggleTheme} />
       </div>
@@ -289,6 +291,7 @@ const Portfolio: React.FC = () => {
         </section>
 
         <SocialLinks isDark={isDark} socialLinks={socialLinks} />
+        <PerformanceMetrics />
       </div>
       </>
       )}
@@ -327,7 +330,8 @@ const Portfolio: React.FC = () => {
           background-color: transparent;
         }
       `}</style>
-    </div>
+      </div>
+    </PerformanceOptimizer>
   );
 };
 
