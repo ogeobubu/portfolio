@@ -57,20 +57,18 @@ export const EnhancedHeroSection: React.FC<EnhancedHeroSectionProps> = ({
           }`}>
             {/* Profile Avatar */}
             <div className="mb-6 sm:mb-8">
-              <div className="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 sm:mb-6">
-                <div 
-                  className="w-full h-full rounded-full p-1 sm:p-2 animate-spin-slow"
-                  style={gradientBackground}
-                >
-                  <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center text-white font-bold text-lg sm:text-3xl">
-                    <img src={ogeobubu} alt="ogeobubu" className="w-full h-full object-cover rounded-full" />
-                  </div>
-                </div>
-                <div className="absolute -top-1 -right-1 sm:-top-2 sm:-right-2 w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-full flex items-center justify-center">
-                  <div className="w-3 h-3 sm:w-4 sm:h-4 bg-white rounded-full"></div>
-                </div>
-              </div>
-            </div>
+  <div className="relative w-24 h-24 sm:w-32 sm:h-32 mx-auto mb-4 sm:mb-6">
+    <div 
+      className="w-full h-full rounded-full p-1 sm:p-2 animate-spin-slow"
+      style={gradientBackground}
+    >
+      <div className="w-full h-full rounded-full bg-gray-800 flex items-center justify-center text-white font-bold text-lg sm:text-3xl">
+        <img src={ogeobubu} alt="ogeobubu" className="w-100 h-100 object-cover rounded-full" />
+      </div>
+    </div>
+    <div className="absolute top-0 right-0 w-6 h-6 sm:w-8 sm:h-8 bg-green-500 rounded-full"></div>
+  </div>
+</div>
 
             {/* Main Heading */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-bold mb-4 sm:mb-6 leading-tight px-2">
