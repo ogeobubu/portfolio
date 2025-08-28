@@ -96,16 +96,7 @@ export const SkillsSection: React.FC<SkillsSectionProps> = ({ isDark, isLoaded }
                           <span className="text-base sm:text-lg">{skill.icon}</span>
                           <span className="font-medium text-sm sm:text-base">{skill.name}</span>
                         </div>
-                        <span className="text-blue-400 font-semibold text-sm sm:text-base">{skill.level}%</span>
-                      </div>
-                      <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
-                        <div 
-                          className="h-2 rounded-full transition-all duration-1000 ease-out"
-                          style={{ 
-                            ...getGradientStyle(category.color),
-                            width: `${skill.level}%` 
-                          }}
-                        ></div>
+                        {/* Removed percentage display as per feedback */}
                       </div>
                     </div>
                   ))}

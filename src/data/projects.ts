@@ -2,6 +2,12 @@ import { Project } from '../types';
 
 export const mainProjects: Project[] = [
   {
+    title: "Efficient Sales Management Software",
+    description: "MacJenuce is a comprehensive sales management software for retail and wholesale, offering features such as sales tracking, payroll management, branch management, and inventory control.",
+    link: "https://mac-genus-fe.vercel.app",
+    tags: ["Sales Management", "Inventory", "Payroll", "Retail", "Wholesale"]
+  },
+  {
     title: "VendPal",
     description: "Connecting Businesses with Verified Vendors - the ultimate solution designed to deliver efficiency, security, and seamlessness to procurement companies and vendors.",
     link: "https://vendpal.vercel.app/",
