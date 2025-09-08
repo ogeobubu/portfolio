@@ -32,7 +32,6 @@ Crawl-delay: 1
 
 # Block specific file types that shouldn't be indexed
 Disallow: /*.json$
-Disallow: /*.xml$
 Disallow: /*.txt$
 Disallow: /*.log$
 Disallow: /*.md$
@@ -77,10 +76,6 @@ Allow: /public/
 
 # Sitemap location
 Sitemap: https://ogeobubu.netlify.app/sitemap.xml
-
-# Additional sitemaps for different content types
-Sitemap: https://ogeobubu.netlify.app/sitemap-projects.xml
-Sitemap: https://ogeobubu.netlify.app/sitemap-skills.xml
 
 # Crawl delay for all bots (be respectful)
 Crawl-delay: 1
