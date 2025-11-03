@@ -30,7 +30,13 @@ app.get('/health', (req, res) => {
 
 // 404 handler
 app.use((req, res) => {
-  res.status(404).json({ message: 'Not Found' });
+  res.status(404).json({ message: 'Not Found', path: req.path });
+});
+
+// Global error handler
+app.use((err: any, req: express.Request, res: express.Response, next: express.NextFunction) => {
+  console.error('Global error:', err);
+  res.status(500).json({ message: 'Internal Server Error' });
 });
 
 export default app;

@@ -11,6 +11,17 @@ const __dirname = join(__filename, '..');
 const app = express();
 const PORT = process.env.PORT || 3000;
 
+// Handle unhandled promise rejections
+process.on('unhandledRejection', (reason, promise) => {
+  console.error('Unhandled Rejection at:', promise, 'reason:', reason);
+});
+
+// Handle uncaught exceptions
+process.on('uncaughtException', (err) => {
+  console.error('Uncaught Exception:', err);
+  process.exit(1);
+});
+
 // Enable gzip compression
 app.use(compression({
   level: 6, // Optimal compression level
@@ -115,8 +126,13 @@ app.get('*', (req, res) => {
 
 // Error handling
 app.use((err, req, res, next) => {
-  console.error(err.stack);
-  res.status(500).send('Something broke!');
+  console.error('Error:', err.stack);
+  // Don't expose error details in production
+  if (process.env.NODE_ENV === 'production') {
+    res.status(500).json({ error: 'Internal Server Error' });
+  } else {
+    res.status(500).json({ error: err.message, stack: err.stack });
+  }
 });
 
 // Create HTTP server
@@ -135,6 +151,8 @@ server.listen(PORT, () => {
   console.log(`   ✅ Cache headers`);
   console.log(`   ✅ Security headers`);
   console.log(`   ✅ Static file optimization`);
+  console.log(`   ✅ Error handling`);
+  console.log(`   ✅ Graceful shutdown`);
 });
 
 // Graceful shutdown
