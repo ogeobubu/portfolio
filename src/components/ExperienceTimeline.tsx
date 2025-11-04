@@ -21,7 +21,7 @@ export const ExperienceTimeline: React.FC<ExperienceTimelineProps> = ({ isDark, 
         {
           title: "Frontend Engineer",
           company: "FinesseCodes",
-          period: "Feb 2022–Present",
+          period: "Feb 2022–Nov 2025",
           location: "Remote",
           description: "Lead frontend development for multiple products serving thousands of monthly users.",
           achievements: [
