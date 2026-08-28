@@ -75,13 +75,13 @@ Allow: /assets/
 Allow: /public/
 
 # Sitemap location
-Sitemap: https://ogeobubu.name.ng/sitemap.xml
+Sitemap: https://ogeobubu.dev/sitemap.xml
 
 # Crawl delay for all bots (be respectful)
 Crawl-delay: 1
 
 # Host directive
-Host: https://ogeobubu.name.ng
+Host: https://ogeobubu.dev
 
 # Additional directives for better SEO
 # Allow JavaScript and CSS files for proper rendering
