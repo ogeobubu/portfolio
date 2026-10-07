@@ -2,16 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { ArrowDown, ArrowUpRight, FileText, Github, Linkedin, Mail, Menu, Moon, Sun, Twitter, X } from 'lucide-react';
 import './App.css';
 import portrait from './components/img/main.jpg';
-import vendstashVideo from './components/img/VendStash.mov';
-import squareboxVideo from './components/img/Squarebox.mov';
-import mavericksVideo from './components/img/mavericks.mov';
-import vendpalVideo from './components/img/VendPal | Connecting Businesses with Verified Vendors.mov';
-import ohtopupVideo from './components/img/ohtopup.mov';
-import sidekickeVideo from './components/img/sidekicke.mov';
 import resume from './components/img/oge-obubu-resume.pdf';
 
 type Experience = { period: string; role: string; company: string; description: string; achievements: string[]; technologies: string[] };
-type Project = { name: string; label: string; description: string; href: string; video: string; technologies: string[] };
+type Project = { name: string; label: string; description: string; href: string; technologies: string[] };
 
 const experiences: Experience[] = [
   { period: '2022 — 2025', role: 'Frontend Engineer', company: 'FinesseCodes', description: 'Led frontend development across consumer and business products, turning complex product requirements into fast, dependable interfaces.', achievements: ['Shipped three products serving 1,000+ monthly users.', 'Improved rendering latency by 22% and user engagement by 33.4%.', 'Mentored two junior developers and reduced onboarding time by 40%.'], technologies: ['React', 'TypeScript', 'Redux', 'React Query'] },
@@ -20,12 +14,12 @@ const experiences: Experience[] = [
 ];
 
 const projects: Project[] = [
-  { name: 'VendStash', label: 'B2B payments', description: 'A secure payment platform that helps businesses move money and manage online transactions with confidence.', href: 'https://vendstash.com/', video: vendstashVideo, technologies: ['React', 'Payments', 'Security'] },
-  { name: 'Squarebox', label: 'Digital trading', description: 'A fast, friendly gift-card trading experience with real-time processing, rewards and clear transaction feedback.', href: 'https://squarebox.ng/', video: squareboxVideo, technologies: ['React', 'API integration', 'Responsive UI'] },
-  { name: 'Mavericks', label: 'Service platform', description: 'A polished booking and management experience that makes arranging professional cleaning services feel effortless.', href: 'https://wash.mavericks.ng', video: mavericksVideo, technologies: ['React', 'Booking flow', 'Product design'] },
-  { name: 'VendPal', label: 'Procurement', description: 'A marketplace connecting businesses with verified vendors, designed around efficient and transparent procurement.', href: 'https://vendpal.vercel.app/', video: vendpalVideo, technologies: ['React', 'TypeScript', 'Marketplace'] },
-  { name: 'OhTopUp', label: 'Utilities', description: 'A simple utility-payment product that gives customers instant processing, discounts and a rewarding checkout flow.', href: 'https://ohtopup.name.ng/', video: ohtopupVideo, technologies: ['Payments', 'Rewards', 'Mobile first'] },
-  { name: 'Sidekicke', label: 'Creative agency', description: 'A lively digital home for an experiential marketing agency creating memorable, culture-led brand moments.', href: 'https://sidekicke.vercel.app/', video: sidekickeVideo, technologies: ['Next.js', 'Creative direction', 'Motion'] },
+  { name: 'VendStash', label: 'B2B payments', description: 'A secure payment platform that helps businesses move money and manage online transactions with confidence.', href: 'https://vendstash.com/', technologies: ['React', 'Payments', 'Security'] },
+  { name: 'Squarebox', label: 'Digital trading', description: 'A fast, friendly gift-card trading experience with real-time processing, rewards and clear transaction feedback.', href: 'https://squarebox.ng/', technologies: ['React', 'API integration', 'Responsive UI'] },
+  { name: 'Mavericks', label: 'Service platform', description: 'A polished booking and management experience that makes arranging professional cleaning services feel effortless.', href: 'https://wash.mavericks.ng', technologies: ['React', 'Booking flow', 'Product design'] },
+  { name: 'VendPal', label: 'Procurement', description: 'A marketplace connecting businesses with verified vendors, designed around efficient and transparent procurement.', href: 'https://vendpal.vercel.app/', technologies: ['React', 'TypeScript', 'Marketplace'] },
+  { name: 'OhTopUp', label: 'Utilities', description: 'A simple utility-payment product that gives customers instant processing, discounts and a rewarding checkout flow.', href: 'https://ohtopup.name.ng/', technologies: ['Payments', 'Rewards', 'Mobile first'] },
+  { name: 'Sidekicke', label: 'Creative agency', description: 'A lively digital home for an experiential marketing agency creating memorable, culture-led brand moments.', href: 'https://sidekicke.vercel.app/', technologies: ['Next.js', 'Creative direction', 'Motion'] },
 ];
 
 const navItems = ['about', 'experience', 'work', 'contact'];
@@ -107,7 +101,7 @@ function App() {
         <section id="work" className="section">
           <div className="section-heading"><span>02 / Selected work</span><h2>Products built for real life.</h2><p>A selection of platforms I’ve helped shape—from payments and procurement to everyday services.</p></div>
           <div className="project-list">{projects.map((project, index) => <a className="project" href={project.href} target="_blank" rel="noreferrer" key={project.name}>
-            <div className="project-media"><video src={project.video} muted loop playsInline preload={index < 2 ? 'metadata' : 'none'} onMouseEnter={(e) => e.currentTarget.play()} onMouseLeave={(e) => { e.currentTarget.pause(); e.currentTarget.currentTime = 0; }} /><span className="project-number">0{index + 1}</span></div>
+            <div className={`project-media project-theme-${index + 1}`}><div className="browser-bar"><i /><i /><i /></div><div className="project-monogram">{project.name.slice(0, 2)}</div><strong>{project.name}</strong><span className="project-number">0{index + 1}</span></div>
             <div className="project-copy"><p className="project-label">{project.label}</p><h3>{project.name}<ArrowUpRight size={20} /></h3><p>{project.description}</p><div className="tags">{project.technologies.map((technology) => <span key={technology}>{technology}</span>)}</div></div>
           </a>)}</div>
         </section>

@@ -44,7 +44,15 @@ button,a { font:inherit; } button { color:inherit; } a { color:inherit; text-dec
 .project { display:grid; grid-template-columns:minmax(210px,.8fr) 1fr; gap:clamp(1.5rem,3vw,3.5rem); padding:3rem 0; border-bottom:1px solid var(--line); }
 .project-media { position:relative; aspect-ratio:16/10; overflow:hidden; background:var(--card); border-radius:2px; box-shadow:0 18px 40px var(--shadow); }
 .project-media::after { content:''; position:absolute; inset:0; background:color-mix(in srgb,var(--accent) 16%,transparent); mix-blend-mode:color; transition:opacity .3s; } .project:hover .project-media::after { opacity:0; }
-.project-media video { width:100%; height:100%; object-fit:cover; filter:saturate(.65) contrast(.95); transition:filter .3s,transform .45s; } .project:hover video { filter:saturate(1); transform:scale(1.035); }
+.project-media { display:flex; flex-direction:column; justify-content:center; align-items:center; color:#fff; transition:transform .4s,filter .3s; }
+.project:hover .project-media { transform:translateY(-4px); filter:saturate(1.15); }
+.browser-bar { position:absolute; inset:0 0 auto; height:24px; display:flex; align-items:center; gap:5px; padding:0 9px; background:rgba(5,10,24,.18); }
+.browser-bar i { width:5px; height:5px; border-radius:50%; background:rgba(255,255,255,.65); }
+.project-monogram { display:grid; place-items:center; width:56px; height:56px; margin-bottom:.7rem; border:1px solid rgba(255,255,255,.48); border-radius:50%; font:500 1rem 'DM Mono',monospace; backdrop-filter:blur(5px); }
+.project-media strong { font-size:clamp(1rem,1.55vw,1.35rem); letter-spacing:-.03em; }
+.project-theme-1 { background:linear-gradient(140deg,#5b39bf,#111a3c); } .project-theme-2 { background:linear-gradient(140deg,#ef724e,#8d244b); }
+.project-theme-3 { background:linear-gradient(140deg,#15988f,#0b3e5e); } .project-theme-4 { background:linear-gradient(140deg,#3769b5,#19285b); }
+.project-theme-5 { background:linear-gradient(140deg,#3071ec,#142e6e); } .project-theme-6 { background:linear-gradient(140deg,#d34a87,#5a1b69); }
 .project-number { position:absolute; z-index:1; left:.7rem; top:.7rem; padding:.3rem .45rem; background:var(--bg); color:var(--accent); font:.62rem 'DM Mono',monospace; }
 .project-copy { align-self:center; } .project-label { margin:0 0 .65rem; color:var(--accent); font-size:.64rem; }
 .project-copy h3 { display:flex; align-items:center; justify-content:space-between; margin:0 0 .8rem; font-size:clamp(1.4rem,2vw,2rem); letter-spacing:-.035em; } .project-copy h3 svg { transition:transform .25s; } .project:hover h3 svg { transform:translate(4px,-4px); color:var(--accent); }
