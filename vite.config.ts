@@ -1,12 +1,10 @@
 import { defineConfig } from 'vite';
-import tailwindcss from '@tailwindcss/vite'
 import { compression } from 'vite-plugin-compression2'
 import { visualizer } from 'rollup-plugin-visualizer'
 
 export default defineConfig({
   base: './',
   plugins: [
-    tailwindcss(),
     // Gzip compression for all assets
     compression({
       algorithm: 'gzip',
@@ -39,17 +37,7 @@ export default defineConfig({
         manualChunks: {
           // Vendor chunks
           'react-vendor': ['react', 'react-dom'],
-          'ui-vendor': ['@headlessui/react', 'framer-motion'],
           'icons-vendor': ['lucide-react'],
-          'utils-vendor': ['aos', 'react-scroll'],
-          
-          // Separate chunks for different sections
-          'hero': ['./src/components/EnhancedHeroSection.tsx'],
-          'portfolio': ['./src/components/EnhancedPortfolio.tsx'],
-          'projects': ['./src/components/ProjectCard.tsx', './src/components/EnhancedProjectCard.tsx'],
-          'contact': ['./src/components/EnhancedContactSection.tsx'],
-          'skills': ['./src/components/SkillsSection.tsx'],
-          'experience': ['./src/components/ExperienceTimeline.tsx'],
         },
         
         // Optimize asset file names for better caching
@@ -111,13 +99,8 @@ export default defineConfig({
     include: [
       'react',
       'react-dom',
-      '@headlessui/react',
-      'framer-motion',
       'lucide-react',
-      'aos',
-      'react-scroll',
     ],
-    exclude: ['@tailwindcss/vite'],
   },
   
   // CSS optimization
